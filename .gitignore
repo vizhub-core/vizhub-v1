@@ -1,9 +1,4 @@
-node_modules
-dist
-yarn.lock
-yarn-error.log
-lerna-debug.log
-.next
+/node_modules
+/build
 *.swp
-*.autosave
-.env
+yarn.lock
