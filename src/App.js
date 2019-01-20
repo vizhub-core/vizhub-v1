@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
+import { Navbar } from './Navbar';
 import './App.css';
+import './Bulma.sass';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        VizHub
-      </div>
-    );
-  }
-}
-
-export default App;
+export const App = () => (
+  <Navbar />
+)

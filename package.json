@@ -2,6 +2,8 @@
   "name": "vizhub",
   "version": "0.1.0",
   "dependencies": {
+    "bulma": "^0.7.2",
+    "node-sass": "^4.11.0",
     "react": "16.8.0-alpha.0",
     "react-dom": "16.8.0-alpha.0",
     "react-scripts": "2.1.3"
