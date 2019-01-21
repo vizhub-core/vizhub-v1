@@ -1,62 +1,61 @@
 import React from 'react';
 
-export const Navbar = () => (
-  <nav className="navbar" role="navigation" aria-label="main navigation">
-    <div className="navbar-brand">
-      <div className="navbar-item">
+export const Navbar = ({ user, onSignIn }) => (
+  <nav className='navbar' role='navigation' aria-label='main navigation'>
+    <div className='navbar-brand'>
+      <div className='navbar-item'>
         VizHub
       </div>
 
-      <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+      <a role='button' className='navbar-burger burger' aria-label='menu' aria-expanded='false' data-target='navbar'>
+        <span aria-hidden='true'></span>
+        <span aria-hidden='true'></span>
+        <span aria-hidden='true'></span>
       </a>
     </div>
 
-    <div id="navbarBasicExample" className="navbar-menu">
-      <div className="navbar-start">
-        <a className="navbar-item">
-          Home
-        </a>
+    <div id='navbar' className='navbar-menu'>
+      <div className='navbar-end'>
+        <div className='navbar-item'>
+          {
+            user
+              ? (
+                <div className='navbar-item has-dropdown is-hoverable'>
+                  <div className='navbar-link'>
+                    <figure className='image is-32x32'>
+                      <img className='is-rounded' src={user.avatarUrl + '&s=64'}/>
+                    </figure>
+                  </div>
 
-        <a className="navbar-item">
-          Documentation
-        </a>
-
-        <div className="navbar-item has-dropdown is-hoverable">
-          <a className="navbar-link">
-            More
-          </a>
-
-          <div className="navbar-dropdown">
-            <a className="navbar-item">
-              About
-            </a>
-            <a className="navbar-item">
-              Jobs
-            </a>
-            <a className="navbar-item">
-              Contact
-            </a>
-            <hr className="navbar-divider" />
-            <a className="navbar-item">
-              Report an issue
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="navbar-end">
-        <div className="navbar-item">
-          <div className="buttons">
-            <a className="button is-primary">
-              <strong>Sign up</strong>
-            </a>
-            <a className="button is-light">
-              Log in
-            </a>
-          </div>
+                  <div className='navbar-dropdown is-right'>
+                    <a className='navbar-item'>
+                      Create Visualization
+                    </a>
+                    <a className='navbar-item'>
+                      Upload Dataset
+                    </a>
+                    <hr className='navbar-divider' />
+                    <a className='navbar-item'>
+                      Profile
+                    </a>
+                    <a className='navbar-item'>
+                      Account
+                    </a>
+                    <hr className='navbar-divider' />
+                    <a className='navbar-item'>
+                      Sign out
+                    </a>
+                  </div>
+                </div>
+              )
+              : (
+                <div className='buttons'>
+                  <div onClick={onSignIn} className='button is-primary'>
+                    Sign in
+                  </div>
+                </div>
+              )
+          }
         </div>
       </div>
     </div>
