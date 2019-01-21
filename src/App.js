@@ -6,6 +6,8 @@ import { fakeUser } from './fakeUser';
 
 export const App = () => {
   const [user, setUser] = useState(null);
+  const onSignIn = () => setUser(fakeUser);
+  const onSignOut = () => setUser(null);
 
-  return <Navbar user={user} onSignIn={() => setUser(fakeUser)} />;
+  return <Navbar user={user} onSignIn={onSignIn} onSignOut={onSignOut} />;
 };

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const Navbar = ({ user, onSignIn }) => {
+export const Navbar = ({ user, onSignIn, onSignOut }) => {
   const [active, setActive] = useState(false);
   const onBurgerClick = () => setActive(!active);
   const activeClass = active ? ' is-active' : '';
@@ -25,36 +25,35 @@ export const Navbar = ({ user, onSignIn }) => {
 
       <div className={'navbar-menu ' + activeClass}>
         <div className="navbar-end">
-          <div className="navbar-item">
-            {user ? (
-              <div className="navbar-item has-dropdown is-hoverable">
-                <div className="navbar-link">
-                  <figure className="image is-32x32">
-                    <img
-                      className="is-rounded"
-                      src={user.avatarUrl + '&s=64'}
-                    />
-                  </figure>
-                </div>
-
-                <div className="navbar-dropdown is-right">
-                  <a className="navbar-item">Create Visualization</a>
-                  <a className="navbar-item">Upload Dataset</a>
-                  <hr className="navbar-divider" />
-                  <a className="navbar-item">Profile</a>
-                  <a className="navbar-item">Account</a>
-                  <hr className="navbar-divider" />
-                  <a className="navbar-item">Sign out</a>
-                </div>
+          {user ? (
+            <div className="navbar-item has-dropdown is-hoverable">
+              <div className="navbar-link">
+                <img
+                  height="28"
+                  className="is-rounded"
+                  src={user.avatarUrl + '&s=56'}
+                />
               </div>
-            ) : (
+
+              <div className="navbar-dropdown is-right">
+                <a className="navbar-item">Create Visualization</a>
+                <a className="navbar-item">Upload Dataset</a>
+                <hr className="navbar-divider" />
+                <a className="navbar-item">Profile</a>
+                <a className="navbar-item">Account</a>
+                <hr className="navbar-divider" />
+                <a onClick={onSignOut} className="navbar-item">Sign out</a>
+              </div>
+            </div>
+          ) : (
+            <div className="navbar-item">
               <div className="buttons">
                 <div onClick={onSignIn} className="button is-primary">
                   Sign in
                 </div>
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </nav>
