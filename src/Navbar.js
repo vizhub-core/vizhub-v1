@@ -24,6 +24,12 @@ export const Navbar = ({ user, onSignIn, onSignOut }) => {
       </div>
 
       <div className={'navbar-menu ' + activeClass}>
+
+        <div className="navbar-start">
+          <a className="navbar-item">
+            About
+          </a>
+        </div>
         <div className="navbar-end">
           {user ? (
             <div className="navbar-item has-dropdown is-hoverable">
