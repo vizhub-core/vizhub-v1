@@ -13,17 +13,25 @@ const Header = styled.div`
   justify-content: space-between;
 `;
 
-const headerHeight = '32px'
+const headerHeight = 32;
+const infoAvatarHeight = 64;
 
 const Logo = styled.img`
-  height: ${headerHeight};
+  height: ${headerHeight}px;
 `;
 
 const Avatar = styled.img`
-  height: ${headerHeight};
   border-radius: 50%;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+`;
+
+const HeaderAvatar = styled(Avatar)`
+  height: ${headerHeight}px;
   cursor: pointer;
+`;
+
+const InfoAvatar = styled(Avatar)`
+  height: ${infoAvatarHeight}px;
 `;
 
 const Runner = styled.div`
@@ -31,18 +39,38 @@ const Runner = styled.div`
   background-color: #ddd;
 `;
 
+const InfoActionsWrapper = styled.div`
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Info = styled.div``;
+
+const Actions = () => <div>Actions</div>;
+
+const avatarUrl = (gitHubId, height) =>
+  `https://avatars0.githubusercontent.com/u/${gitHubId}?s=${height * 2}&v=4`;
+
 export const Viewer = () => {
 
-  // TODO get currently logged in user avatar from context.
-  const avatarUrl = 'https://avatars0.githubusercontent.com/u/68416?s=64&v=4';
+  // TODO get these from context.
+  const loggedInUser = '68416';
+  const ownerUser = '68416';
 
   return (
     <>
       <Header>
         <Logo src={logo} />
-        <Avatar src={avatarUrl} />
+        <HeaderAvatar src={avatarUrl(loggedInUser, headerHeight)} />
       </Header>
       <Runner />
+      <InfoActionsWrapper>
+        <Info>
+          <InfoAvatar src={avatarUrl(ownerUser, infoAvatarHeight)} />
+        </Info>
+        <Actions />
+      </InfoActionsWrapper>
     </>
   );
 };
