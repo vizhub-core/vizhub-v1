@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../logo.svg';
 import styled, { keyframes } from 'styled-components';
+import logo from '../logo.svg';
 
 const SpinningLogoContainer = styled.div`
   background-color: #4567aa;
@@ -19,13 +19,15 @@ const spin = keyframes`
 
 const SpinningImage = styled.img`
   animation: ${spin} infinite 50s linear;
-  height: 30vmin;
-`
+  height: 25vmin;
+`;
 
-const SpinningLogo = () => <SpinningImage src={logo} />;
+const SpinningLogo = () => (
+  <SpinningImage src={logo} />
+);
 
 export const LoadingScreen = () => (
   <SpinningLogoContainer>
     <SpinningLogo />
   </SpinningLogoContainer>
-)
+);

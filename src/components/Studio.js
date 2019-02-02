@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Configurator } from './Configurator';
+import { Editor } from './Editor';
+import { Viewer } from './Viewer';
 
 const StudioContainer = styled.div`
   display: flex;
@@ -17,15 +20,20 @@ const ViewerContainer = styled.div`
   flex-grow: 2;
 `;
 
-export const Studio = () =>
+export const Studio = () => (
   <StudioContainer>
+
     <ConfiguratorContainer>
-      Configurator
+      <Configurator />
     </ConfiguratorContainer>
+
     <EditorContainer>
-      Editor
+      <Editor />
     </EditorContainer>
+
     <ViewerContainer>
-      Viewer
+      <Viewer />
     </ViewerContainer>
+
   </StudioContainer>
+);
