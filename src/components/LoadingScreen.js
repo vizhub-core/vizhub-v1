@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import logo from '../logo.svg';
 
-const SpinningLogoContainer = styled.div`
+const SpinningLogoWrapper = styled.div`
   background-color: #4567aa;
   min-height: 100vh;
   display: flex;
@@ -27,7 +27,7 @@ const SpinningLogo = () => (
 );
 
 export const LoadingScreen = () => (
-  <SpinningLogoContainer>
+  <SpinningLogoWrapper>
     <SpinningLogo />
-  </SpinningLogoContainer>
+  </SpinningLogoWrapper>
 );

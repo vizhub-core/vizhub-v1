@@ -4,36 +4,36 @@ import { Configurator } from './Configurator';
 import { Editor } from './Editor';
 import { Viewer } from './Viewer';
 
-const StudioContainer = styled.div`
+const StudioWrapper = styled.div`
   display: flex;
 `;
 
-const ConfiguratorContainer = styled.div`
+const ConfiguratorWrapper = styled.div`
   flex-grow: 1;
 `;
 
-const EditorContainer = styled.div`
+const EditorWrapper = styled.div`
   flex-grow: 4;
 `;
 
-const ViewerContainer = styled.div`
+const ViewerWrapper = styled.div`
   flex-grow: 2;
 `;
 
 export const Studio = () => (
-  <StudioContainer>
+  <StudioWrapper>
 
-    <ConfiguratorContainer>
+    <ConfiguratorWrapper>
       <Configurator />
-    </ConfiguratorContainer>
+    </ConfiguratorWrapper>
 
-    <EditorContainer>
+    <EditorWrapper>
       <Editor />
-    </EditorContainer>
+    </EditorWrapper>
 
-    <ViewerContainer>
+    <ViewerWrapper>
       <Viewer />
-    </ViewerContainer>
+    </ViewerWrapper>
 
-  </StudioContainer>
+  </StudioWrapper>
 );
