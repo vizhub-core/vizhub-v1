@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { timeFormat } from 'd3-time-format';
 import logo from '../logo.svg';
 
 const ViewerWrapper = styled.div`
@@ -39,38 +40,71 @@ const Runner = styled.div`
   background-color: #ddd;
 `;
 
-const InfoActionsWrapper = styled.div`
+const InfoActions = styled.div`
   margin: 5px;
   display: flex;
   justify-content: space-between;
 `;
 
-const Info = styled.div``;
+const Info = styled.div`
+  display: flex;
+`;
 
 const Actions = () => <div>Actions</div>;
 
-const avatarUrl = (gitHubId, height) =>
+const avatarUrl = ({ gitHubId }, height) =>
   `https://avatars0.githubusercontent.com/u/${gitHubId}?s=${height * 2}&v=4`;
+
+const OwnerNamePublishDate = styled.div`
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const OwnerName = styled.div`
+  font-weight: bold;
+  line-height: 1.6em;
+`;
+
+const PublishDate = styled.div`
+  color: #11111199;
+  font-size: 0.9em;
+`;
+
+const formatPublishDate = timeFormat('%B %d, %Y');
 
 export const Viewer = () => {
 
   // TODO get these from context.
-  const loggedInUser = '68416';
-  const ownerUser = '68416';
+  const loggedInUser = {
+    gitHubId: '68416',
+    name: 'Curran Kelleher'
+  };
+  const ownerUser = loggedInUser;
+  const publishDate = new Date();
 
   return (
-    <>
+    <ViewerWrapper>
       <Header>
         <Logo src={logo} />
         <HeaderAvatar src={avatarUrl(loggedInUser, headerHeight)} />
       </Header>
       <Runner />
-      <InfoActionsWrapper>
+      <InfoActions>
         <Info>
           <InfoAvatar src={avatarUrl(ownerUser, infoAvatarHeight)} />
+          <OwnerNamePublishDate>
+            <OwnerName>
+              { ownerUser.name }
+            </OwnerName>
+            <PublishDate>
+              { formatPublishDate(publishDate) }
+            </PublishDate>
+          </OwnerNamePublishDate>
         </Info>
         <Actions />
-      </InfoActionsWrapper>
-    </>
+      </InfoActions>
+    </ViewerWrapper>
   );
 };
