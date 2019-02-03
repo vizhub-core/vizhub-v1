@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { timeFormat } from 'd3-time-format';
 import { InfoAvatar, avatarUrl } from './Avatar';
-import { infoAvatarHeight } from '../constants';
+import { infoAvatarHeight } from './constants';
 
 const InfoWrapper = styled.div`
   display: flex;

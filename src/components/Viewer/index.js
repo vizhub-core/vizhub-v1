@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../logo.svg';
+import logo from '../../svg/logo.svg';
 import { Info } from './Info';
 import { avatarUrl, HeaderAvatar } from './Avatar';
-import { headerHeight } from '../constants';
+import { headerHeight } from './constants';
 
 const ViewerWrapper = styled.div`
   display: flex;

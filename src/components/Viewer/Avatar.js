@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { headerHeight, infoAvatarHeight } from '../constants';
+import { headerHeight, infoAvatarHeight } from './constants';
 
 const Avatar = styled.img`
   border-radius: 50%;
