@@ -23,6 +23,7 @@ export const Viewer = () => {
   const ownerUser = loggedInUser;
   const publishDate = new Date();
   const title = 'Visualization Title';
+  const viewCount = 1234;
 
   return (
     <ViewerWrapper>
@@ -32,7 +33,12 @@ export const Viewer = () => {
       </Header>
       <Runner />
       <InfoActions>
-        <Info title={title} user={ownerUser} publishDate={publishDate} />
+        <Info
+          title={title}
+          viewCount={viewCount}
+          user={ownerUser}
+          publishDate={publishDate}
+        />
         <Actions />
       </InfoActions>
     </ViewerWrapper>

@@ -1,4 +1,7 @@
 import React from 'react';
+import { timeFormat } from 'd3-time-format';
+import { format } from 'd3-format';
+import { avatarUrl } from '../avatarUrl';
 import {
   InfoWrapper,
   InfoAvatar,
@@ -7,16 +10,17 @@ import {
   OwnerNamePublishDate,
   OwnerName,
   PublishDate,
-  Title
+  Title,
+  ViewCount
 } from './styles';
-import { timeFormat } from 'd3-time-format';
-import { avatarUrl } from '../avatarUrl';
 
 const formatPublishDate = timeFormat('%B %d, %Y');
+const formatViewCount = format(',');
 
-export const Info = ({ title, user, publishDate }) => (
+export const Info = ({ title, viewCount, user, publishDate }) => (
   <InfoWrapper>
     <Title>{title}</Title>
+    <ViewCount>{formatViewCount(viewCount)} views</ViewCount>
     <Owner>
       <InfoAvatar src={avatarUrl(user, infoAvatarHeight)} />
       <OwnerNamePublishDate>

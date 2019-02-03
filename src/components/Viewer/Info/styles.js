@@ -17,7 +17,7 @@ export const Owner = styled.div`
 `;
 
 export const OwnerNamePublishDate = styled.div`
-  margin-left: 16px;
+  margin-left: 14px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,10 +29,15 @@ export const OwnerName = styled.div`
 `;
 
 export const PublishDate = styled.div`
-  color: #11111199;
   font-size: 0.9em;
 `;
 
 export const Title = styled.div`
-  font-size: 2em;
+  font-size: 1.5em;
+  margin-bottom: 6px;
+`;
+
+export const ViewCount = styled.div`
+  font-size: 0.8em;
+  margin-bottom: 10px;
 `;
