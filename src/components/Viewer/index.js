@@ -1,35 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 import logo from '../../svg/logo.svg';
 import { Info } from './Info';
-import { avatarUrl, HeaderAvatar } from './Avatar';
-import { headerHeight } from './constants';
-
-const ViewerWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Header = styled.div`
-  margin: 5px;
-  display: flex;
-  justify-content: space-between;
-`;
-
-const Logo = styled.img`
-  height: ${headerHeight}px;
-`;
-
-const Runner = styled.div`
-  height: 300px;
-  background-color: #ddd;
-`;
-
-const InfoActions = styled.div`
-  margin: 5px;
-  display: flex;
-  justify-content: space-between;
-`;
+import { avatarUrl } from './avatarUrl';
+import * as S from './styles'
 
 const Actions = () => <div>Actions</div>;
 
@@ -44,16 +17,16 @@ export const Viewer = () => {
   const publishDate = new Date();
 
   return (
-    <ViewerWrapper>
-      <Header>
-        <Logo src={logo} />
-        <HeaderAvatar src={avatarUrl(loggedInUser, headerHeight)} />
-      </Header>
-      <Runner />
-      <InfoActions>
+    <S.ViewerWrapper>
+      <S.Header>
+        <S.Logo src={logo} />
+        <S.HeaderAvatar src={avatarUrl(loggedInUser, S.headerHeight)} />
+      </S.Header>
+      <S.Runner />
+      <S.InfoActions>
         <Info user={ownerUser} publishDate={publishDate} />
         <Actions />
-      </InfoActions>
-    </ViewerWrapper>
+      </S.InfoActions>
+    </S.ViewerWrapper>
   );
 };
