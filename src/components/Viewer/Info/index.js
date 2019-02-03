@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './styles'
 import { timeFormat } from 'd3-time-format';
-import { avatarUrl } from './avatarUrl';
+import { avatarUrl } from '../avatarUrl';
 
 const formatPublishDate = timeFormat('%B %d, %Y');
 
