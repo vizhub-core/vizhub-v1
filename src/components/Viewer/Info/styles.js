@@ -9,6 +9,11 @@ export const InfoAvatar = styled(Avatar)`
 
 export const InfoWrapper = styled.div`
   display: flex;
+  flex-direction: column;
+`;
+
+export const Owner = styled.div`
+  display: flex;
 `;
 
 export const OwnerNamePublishDate = styled.div`
@@ -26,4 +31,8 @@ export const OwnerName = styled.div`
 export const PublishDate = styled.div`
   color: #11111199;
   font-size: 0.9em;
+`;
+
+export const Title = styled.div`
+  font-size: 2em;
 `;

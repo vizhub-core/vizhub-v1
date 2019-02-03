@@ -3,25 +3,26 @@ import {
   InfoWrapper,
   InfoAvatar,
   infoAvatarHeight,
+  Owner,
   OwnerNamePublishDate,
   OwnerName,
   PublishDate,
+  Title
 } from './styles';
 import { timeFormat } from 'd3-time-format';
 import { avatarUrl } from '../avatarUrl';
 
 const formatPublishDate = timeFormat('%B %d, %Y');
 
-export const Info = ({ user, publishDate }) => (
+export const Info = ({ title, user, publishDate }) => (
   <InfoWrapper>
-    <InfoAvatar src={avatarUrl(user, infoAvatarHeight)} />
-    <OwnerNamePublishDate>
-      <OwnerName>
-        { user.name }
-      </OwnerName>
-      <PublishDate>
-        { formatPublishDate(publishDate) }
-      </PublishDate>
-    </OwnerNamePublishDate>
+    <Title>{title}</Title>
+    <Owner>
+      <InfoAvatar src={avatarUrl(user, infoAvatarHeight)} />
+      <OwnerNamePublishDate>
+        <OwnerName>{user.name}</OwnerName>
+        <PublishDate>{formatPublishDate(publishDate)}</PublishDate>
+      </OwnerNamePublishDate>
+    </Owner>
   </InfoWrapper>
-)
+);

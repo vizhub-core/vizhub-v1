@@ -12,7 +12,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "prettier": "prettier --single-quote --write src/**/*.js"
+    "prettier": "prettier --single-quote --write 'src/**/*.js'"
   },
   "eslintConfig": {
     "extends": "react-app"
