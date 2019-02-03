@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../svg/logo.svg';
 import { Info } from './Info';
 import { avatarUrl } from './avatarUrl';
-import * as S from './styles'
+import {ViewerWrapper, Header, Runner, InfoActions, Logo, HeaderAvatar, headerHeight } from './styles';
 
 const Actions = () => <div>Actions</div>;
 
@@ -17,16 +17,16 @@ export const Viewer = () => {
   const publishDate = new Date();
 
   return (
-    <S.ViewerWrapper>
-      <S.Header>
-        <S.Logo src={logo} />
-        <S.HeaderAvatar src={avatarUrl(loggedInUser, S.headerHeight)} />
-      </S.Header>
-      <S.Runner />
-      <S.InfoActions>
+    <ViewerWrapper>
+      <Header>
+        <Logo src={logo} />
+        <HeaderAvatar src={avatarUrl(loggedInUser, headerHeight)} />
+      </Header>
+      <Runner />
+      <InfoActions>
         <Info user={ownerUser} publishDate={publishDate} />
         <Actions />
-      </S.InfoActions>
-    </S.ViewerWrapper>
+      </InfoActions>
+    </ViewerWrapper>
   );
 };

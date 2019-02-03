@@ -22,7 +22,6 @@ const ViewerWrapper = styled.div`
 
 export const Studio = () => (
   <StudioWrapper>
-
     <ConfiguratorWrapper>
       <Configurator />
     </ConfiguratorWrapper>
@@ -34,6 +33,5 @@ export const Studio = () => (
     <ViewerWrapper>
       <Viewer />
     </ViewerWrapper>
-
   </StudioWrapper>
 );

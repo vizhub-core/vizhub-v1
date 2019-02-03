@@ -1,20 +1,27 @@
 import React from 'react';
-import * as S from './styles'
+import {
+  InfoWrapper,
+  InfoAvatar,
+  infoAvatarHeight,
+  OwnerNamePublishDate,
+  OwnerName,
+  PublishDate,
+} from './styles';
 import { timeFormat } from 'd3-time-format';
 import { avatarUrl } from '../avatarUrl';
 
 const formatPublishDate = timeFormat('%B %d, %Y');
 
 export const Info = ({ user, publishDate }) => (
-  <S.InfoWrapper>
-    <S.InfoAvatar src={avatarUrl(user, S.infoAvatarHeight)} />
-    <S.OwnerNamePublishDate>
-      <S.OwnerName>
+  <InfoWrapper>
+    <InfoAvatar src={avatarUrl(user, infoAvatarHeight)} />
+    <OwnerNamePublishDate>
+      <OwnerName>
         { user.name }
-      </S.OwnerName>
-      <S.PublishDate>
+      </OwnerName>
+      <PublishDate>
         { formatPublishDate(publishDate) }
-      </S.PublishDate>
-    </S.OwnerNamePublishDate>
-  </S.InfoWrapper>
+      </PublishDate>
+    </OwnerNamePublishDate>
+  </InfoWrapper>
 )

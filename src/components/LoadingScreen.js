@@ -22,9 +22,7 @@ const SpinningImage = styled.img`
   height: 25vmin;
 `;
 
-const SpinningLogo = () => (
-  <SpinningImage src={logo} />
-);
+const SpinningLogo = () => <SpinningImage src={logo} />;
 
 export const LoadingScreen = () => (
   <SpinningLogoWrapper>
