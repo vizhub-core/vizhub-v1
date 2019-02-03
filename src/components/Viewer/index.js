@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../svg/logo.svg';
 import { Info } from './Info';
+import { Actions } from './Actions';
 import { avatarUrl } from './avatarUrl';
 import {
   ViewerWrapper,
@@ -11,8 +12,6 @@ import {
   HeaderAvatar,
   headerHeight
 } from './styles';
-
-const Actions = () => <div>Actions</div>;
 
 export const Viewer = () => {
   // TODO get these from context.
