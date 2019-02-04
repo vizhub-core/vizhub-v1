@@ -15,7 +15,7 @@ import {
 } from './styles';
 
 const formatPublishDate = timeFormat('%B %d, %Y');
-const formatViewCount = format(',');
+export const formatViewCount = format(',');
 
 export const Info = ({ title, viewCount, user, publishDate }) => (
   <InfoWrapper>
