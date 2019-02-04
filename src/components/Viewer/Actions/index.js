@@ -1,7 +1,15 @@
 import React from 'react';
 import { format } from 'd3-format';
 
-import { Wrapper, Row, Action, Icon } from './styles';
+import {
+  Wrapper,
+  Row,
+  Action,
+  Icon,
+  ForkedFrom,
+  ForkedFromText,
+  ForkedFromViz
+} from './styles';
 import fork from '../../../svg/octicons/repo-forked.svg';
 import edit from '../../../svg/octicons/pencil.svg';
 import fullscreen from '../../../svg/material-design/fullscreen.svg';
@@ -33,11 +41,16 @@ export const Actions = ({ upvotes, downvotes }) => (
         <Icon src={downvote} /> {formatVotes(downvotes)}
       </Action>
       <Action>
-        <Icon src={share} /> Share
+        <Icon src={share} />
+        Share
       </Action>
       <Action>
         <Icon src={download} />
       </Action>
     </Row>
+    <ForkedFrom>
+      <ForkedFromText>Forked from</ForkedFromText>
+      <ForkedFromViz />
+    </ForkedFrom>
   </Wrapper>
 );

@@ -9,15 +9,15 @@ const StudioWrapper = styled.div`
 `;
 
 const ConfiguratorWrapper = styled.div`
-  flex-grow: 1;
+  flex: 1;
 `;
 
 const EditorWrapper = styled.div`
-  flex-grow: 4;
+  flex: 4;
 `;
 
 const ViewerWrapper = styled.div`
-  flex-grow: 2;
+  flex: 4;
 `;
 
 export const Studio = () => (

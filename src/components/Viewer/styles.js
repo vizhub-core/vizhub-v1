@@ -2,11 +2,6 @@ import styled from 'styled-components';
 
 export const headerHeight = 32;
 
-export const ViewerWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
 export const Header = styled.div`
   margin: 5px;
   display: flex;
@@ -36,4 +31,8 @@ export const Avatar = styled.img`
 export const HeaderAvatar = styled(Avatar)`
   height: ${headerHeight}px;
   cursor: pointer;
+`;
+
+export const Description = styled.div`
+  margin-top: 10px;
 `;
