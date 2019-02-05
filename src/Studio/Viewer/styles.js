@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 export const headerHeight = 32;
 
+export const ViewerWrapper = styled.div`
+  background: ${props => props.theme.background};
+`;
+
 export const Header = styled.div`
   margin: 5px;
   display: flex;

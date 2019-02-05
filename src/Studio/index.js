@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import {
   StudioWrapper,
   ConfiguratorWrapper,
@@ -8,17 +9,20 @@ import {
 import { Configurator } from './Configurator';
 import { Editor } from './Editor';
 import { Viewer } from './Viewer';
+import { dark } from '../themes';
 
 export const Studio = () => (
   <StudioWrapper>
-    <ConfiguratorWrapper>
-      <Configurator />
-    </ConfiguratorWrapper>
-
-    <EditorWrapper>
-      <Editor />
-    </EditorWrapper>
-
+    <ThemeProvider theme={dark}>
+      <>
+        <ConfiguratorWrapper>
+          <Configurator />
+        </ConfiguratorWrapper>
+        <EditorWrapper>
+          <Editor />
+        </EditorWrapper>
+      </>
+    </ThemeProvider>
     <ViewerWrapper>
       <Viewer />
     </ViewerWrapper>

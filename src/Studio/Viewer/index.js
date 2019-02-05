@@ -4,6 +4,7 @@ import { Info } from './Info';
 import { Actions } from './Actions';
 import { avatarUrl } from './avatarUrl';
 import {
+  ViewerWrapper,
   Header,
   Runner,
   InfoActions,
@@ -27,7 +28,7 @@ export const Viewer = () => {
   const downvotes = 5;
 
   return (
-    <>
+    <ViewerWrapper>
       <Header>
         <Logo src={logo} />
         <HeaderAvatar src={avatarUrl(loggedInUser, headerHeight)} />
@@ -51,6 +52,6 @@ export const Viewer = () => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </Description>
-    </>
+    </ViewerWrapper>
   );
 };
