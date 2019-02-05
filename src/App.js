@@ -12,7 +12,6 @@ export const App = () => {
     setTimeout(() => {
       setLoaded(true);
     }, 1000);
-    let toggle = true;
   }, []);
 
   const content = loaded ? <Studio /> : <LoadingScreen />;

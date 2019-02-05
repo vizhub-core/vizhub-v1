@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
 export const LoadingScreenWrapper = styled.div`
-  background-color: #4567aa;
   width: 100%;
   height: 100%;
   display: flex;
@@ -12,8 +11,8 @@ export const LoadingScreenWrapper = styled.div`
 `;
 
 const spin = keyframes`
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: rotate(-5deg) scale(0.2); }
+  to { transform: rotate(360deg) scale(1); }
 `;
 
 export const SpinningImage = styled.img`
