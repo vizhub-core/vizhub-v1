@@ -9,7 +9,7 @@ import {
 import { Configurator } from './Configurator';
 import { Editor } from './Editor';
 import { Viewer } from './Viewer';
-import { dark } from '../themes';
+import { dark, light } from '../themes';
 
 export const Studio = () => (
   <StudioWrapper>
@@ -23,8 +23,10 @@ export const Studio = () => (
         </EditorWrapper>
       </>
     </ThemeProvider>
-    <ViewerWrapper>
-      <Viewer />
-    </ViewerWrapper>
+    <ThemeProvider theme={light}>
+      <ViewerWrapper>
+        <Viewer />
+      </ViewerWrapper>
+    </ThemeProvider>
   </StudioWrapper>
 );

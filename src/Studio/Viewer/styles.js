@@ -2,12 +2,8 @@ import styled from 'styled-components';
 
 export const headerHeight = 32;
 
-export const ViewerWrapper = styled.div`
-  background: ${props => props.theme.background};
-`;
-
 export const Header = styled.div`
-  margin: 5px;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
 `;
@@ -38,5 +34,5 @@ export const HeaderAvatar = styled(Avatar)`
 `;
 
 export const Description = styled.div`
-  margin-top: 10px;
+  padding: 5px;
 `;

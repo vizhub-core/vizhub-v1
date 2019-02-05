@@ -4,14 +4,19 @@ export const StudioWrapper = styled.div`
   display: flex;
 `;
 
-export const ConfiguratorWrapper = styled.div`
+const ForegroundBackground = styled.div`
+  background: ${props => props.theme.background};
+  color: ${props => props.theme.foreground};
+`;
+
+export const ConfiguratorWrapper = styled(ForegroundBackground)`
   flex: 1;
 `;
 
-export const EditorWrapper = styled.div`
+export const EditorWrapper = styled(ForegroundBackground)`
   flex: 4;
 `;
 
-export const ViewerWrapper = styled.div`
+export const ViewerWrapper = styled(ForegroundBackground)`
   flex: 4;
 `;
