@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { LoadingScreen } from './components/LoadingScreen';
-import { Studio } from './components/Studio';
+import { LoadingScreen } from './LoadingScreen';
+import { Studio } from './Studio';
 
 export const App = () => {
   const [loaded, setLoaded] = useState(false);
@@ -9,7 +9,7 @@ export const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoaded(true);
-    }, 2000);
+    }, 1000);
   }, []);
 
   return loaded ? <Studio /> : <LoadingScreen />;
