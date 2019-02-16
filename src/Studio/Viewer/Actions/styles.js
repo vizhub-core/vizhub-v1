@@ -13,7 +13,7 @@ export const Row = styled.div`
 export const Action = styled.button`
   font-size: 1em;
   background: white;
-  margin: 2px;
+  margin: 2px 0 2px 4px;
   border: 1px solid black;
   border-radius: 2px;
 `;

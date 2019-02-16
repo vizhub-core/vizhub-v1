@@ -2,8 +2,10 @@ import React from 'react';
 import logo from '../../svg/logo.svg';
 import { Info } from './Info';
 import { Actions } from './Actions';
+import { Comments } from './Comments';
 import { avatarUrl } from './avatarUrl';
 import {
+  Padded,
   Header,
   Runner,
   InfoActions,
@@ -28,29 +30,34 @@ export const Viewer = () => {
 
   return (
     <>
-      <Header>
-        <Logo src={logo} />
-        <HeaderAvatar src={avatarUrl(loggedInUser, headerHeight)} />
-      </Header>
+      <Padded>
+        <Header>
+          <Logo src={logo} />
+          <HeaderAvatar src={avatarUrl(loggedInUser, headerHeight)} />
+        </Header>
+      </Padded>
       <Runner />
-      <InfoActions>
-        <Info
-          title={title}
-          viewCount={viewCount}
-          user={ownerUser}
-          publishDate={publishDate}
-        />
-        <Actions upvotes={upvotes} downvotes={downvotes} />
-      </InfoActions>
-      <Description>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </Description>
+      <Padded>
+        <InfoActions>
+          <Info
+            title={title}
+            viewCount={viewCount}
+            user={ownerUser}
+            publishDate={publishDate}
+          />
+          <Actions upvotes={upvotes} downvotes={downvotes} />
+        </InfoActions>
+        <Description>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Description>
+        <Comments />
+      </Padded>
     </>
   );
 };

@@ -2,8 +2,11 @@ import styled from 'styled-components';
 
 export const headerHeight = 32;
 
-export const Header = styled.div`
+export const Padded = styled.div`
   padding: 5px;
+`;
+
+export const Header = styled.div`
   display: flex;
   justify-content: space-between;
 `;
@@ -18,7 +21,6 @@ export const Runner = styled.div`
 `;
 
 export const InfoActions = styled.div`
-  margin: 5px;
   display: flex;
   justify-content: space-between;
 `;
@@ -34,5 +36,5 @@ export const HeaderAvatar = styled(Avatar)`
 `;
 
 export const Description = styled.div`
-  padding: 5px;
+  margin-top: 10px;
 `;

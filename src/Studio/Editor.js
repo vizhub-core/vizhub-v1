@@ -59,5 +59,4 @@ const Code = styled.pre`
   position: absolute;
 `;
 
-export const Editor = () => 
-  <Code>{code}</Code>
+export const Editor = () => <Code>{code}</Code>;
