@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 import { Avatar } from '../styles';
 
-export const infoAvatarHeight = 64;
-
 export const InfoAvatar = styled(Avatar)`
-  height: ${infoAvatarHeight}px;
+  height: ${props => props.theme.infoAvatarHeight}px;
 `;
 
 export const InfoWrapper = styled.div`
