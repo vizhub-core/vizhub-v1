@@ -1,11 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { withRouter } from 'react-router';
 import { LoadingScreen } from '../LoadingScreen';
 import { Studio } from '../Studio';
+import { getShowConfigurator, setShowConfigurator } from '../urlState';
 
-export const StudioPage = () => {
+export const StudioPage = withRouter(props => {
   const [loaded, setLoaded] = useState(false);
-  const [showConfigurator, setShowConfigorator] = useState(false);
+
+  const showConfigurator = getShowConfigurator(props);
   const [showEditor, setShowEditor] = useState(false);
 
   useEffect(() => {
@@ -14,7 +17,7 @@ export const StudioPage = () => {
     }, 1000);
   }, []);
 
-  const onEditClick = () => setShowConfigorator(!showConfigurator);
+  const onEditClick = () => setShowConfigurator(props, !showConfigurator);
   const onFileClick = () => setShowEditor(!showEditor);
 
   return loaded ? (
@@ -27,4 +30,4 @@ export const StudioPage = () => {
   ) : (
     <LoadingScreen />
   );
-};
+});
