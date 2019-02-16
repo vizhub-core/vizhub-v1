@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StudioWrapper = styled.div`
   flex: 1;
   display: flex;
+  overflow: hidden;
 `;
 
 const ForegroundBackground = styled.div`
