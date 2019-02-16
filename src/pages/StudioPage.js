@@ -3,13 +3,20 @@ import { useState, useEffect } from 'react';
 import { withRouter } from 'react-router';
 import { LoadingScreen } from '../LoadingScreen';
 import { Studio } from '../Studio';
-import { getShowConfigurator, setShowConfigurator } from '../urlState';
+import {
+  getShowConfigurator,
+  setShowConfigurator,
+  getFile,
+  setFile
+} from '../urlState';
 
 export const StudioPage = withRouter(props => {
   const [loaded, setLoaded] = useState(false);
 
   const showConfigurator = getShowConfigurator(props);
-  const [showEditor, setShowEditor] = useState(false);
+
+  const file = getFile(props);
+  const showEditor = file !== undefined;
 
   useEffect(() => {
     setTimeout(() => {
@@ -18,7 +25,8 @@ export const StudioPage = withRouter(props => {
   }, []);
 
   const onEditClick = () => setShowConfigurator(props, !showConfigurator);
-  const onFileClick = () => setShowEditor(!showEditor);
+  const onFileClick = clickedFile =>
+    setFile(props, clickedFile === file ? null : clickedFile);
 
   return loaded ? (
     <Studio

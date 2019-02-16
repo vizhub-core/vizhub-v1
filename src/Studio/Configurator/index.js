@@ -1,6 +1,8 @@
 import React from 'react';
 import { Wrapper, Section, File } from './styles';
 
+const files = ['index.html', 'index.js', 'styles.css'];
+
 export const Configurator = ({ onFileClick }) => (
   <Wrapper>
     <Section>Design</Section>
@@ -9,10 +11,11 @@ export const Configurator = ({ onFileClick }) => (
     <input type="text" /> String
     <input type="checkbox" /> Boolean
     <Section>Code</Section>
-    <File onClick={onFileClick}>index.html</File>
-    <File onClick={onFileClick}>index.js</File>
-    <File onClick={onFileClick}>styles.css</File>
-    <Section>Dependencies</Section>
+    {files.map(file => (
+      <File key={file} onClick={() => onFileClick(file)}>
+        {file}
+      </File>
+    ))}
     <Section>Settings</Section>
   </Wrapper>
 );
