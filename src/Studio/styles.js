@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StudioWrapper = styled.div`
+  flex: 1;
   display: flex;
 `;
 
@@ -16,9 +17,14 @@ export const ConfiguratorWrapper = styled(ForegroundBackground)`
 
 export const EditorWrapper = styled(ForegroundBackground)`
   flex: 1;
+  overflow: auto;
+  display: flex;
+  height: 100%;
 `;
 
 export const ViewerWrapper = styled(ForegroundBackground)`
   flex: 1;
   overflow: auto;
+  display: flex;
+  justify-content: center;
 `;

@@ -1,7 +1,4 @@
-import React from 'react';
-import styled from 'styled-components';
-
-const code = `import {
+export const sampleCode = `import {
   select,
   scaleOrdinal,
   schemeSpectral
@@ -51,12 +48,3 @@ const render = () => {
   choroplethMapG.call(choroplethMap, { features, colorScale, colorValue, selectedCountryId, onCountryClick });
 };
 `;
-
-const Code = styled.pre`
-  font-family: monospace;
-  margin-top: 2px;
-  margin-left: 2px;
-  position: absolute;
-`;
-
-export const Editor = () => <Code>{code}</Code>;

@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  max-width: 980px;
+`;
+
 export const Padded = styled.div`
   padding: 5px;
 `;

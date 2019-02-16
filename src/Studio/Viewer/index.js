@@ -6,6 +6,7 @@ import { Actions } from './Actions';
 import { Comments } from './Comments';
 import { avatarUrl } from './avatarUrl';
 import {
+  Wrapper,
   Padded,
   Header,
   Runner,
@@ -41,7 +42,7 @@ export const Viewer = withTheme(({ theme, onEditClick }) => {
   ];
 
   return (
-    <>
+    <Wrapper>
       <Padded>
         <Header>
           <Logo src={logo} />
@@ -74,6 +75,6 @@ export const Viewer = withTheme(({ theme, onEditClick }) => {
         </Description>
         <Comments comments={comments} />
       </Padded>
-    </>
+    </Wrapper>
   );
 });
