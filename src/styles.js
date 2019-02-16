@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 
 export const AppWrapper = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   margin: 0;
+  padding: 0;
+  height: 100vh;
   display: flex;
+  justify-content: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

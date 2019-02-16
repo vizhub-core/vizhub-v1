@@ -8,4 +8,6 @@ export const Section = styled.div`
 export const File = styled.div`
   font-family: monospace;
   margin-left: 2px;
+  font-size: 1.4em;
+  cursor: pointer;
 `;

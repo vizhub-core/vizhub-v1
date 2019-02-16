@@ -15,7 +15,7 @@ import {
   Description
 } from './styles';
 
-export const Viewer = withTheme(({ theme }) => {
+export const Viewer = withTheme(({ theme, onEditClick }) => {
   // TODO get these from context.
   const loggedInUser = {
     gitHubId: '68416',
@@ -57,7 +57,11 @@ export const Viewer = withTheme(({ theme }) => {
             user={ownerUser}
             publishDate={publishDate}
           />
-          <Actions upvotes={upvotes} downvotes={downvotes} />
+          <Actions
+            upvotes={upvotes}
+            downvotes={downvotes}
+            onEditClick={onEditClick}
+          />
         </InfoActions>
         <Description>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -11,21 +11,30 @@ import { Editor } from './Editor';
 import { Viewer } from './Viewer';
 import { dark, light } from '../themes';
 
-export const Studio = () => (
-  <StudioWrapper>
+export const Studio = ({
+  showConfigurator,
+  showEditor,
+  onEditClick,
+  onFileClick
+}) => (
+  <StudioWrapper showConfigurator={showConfigurator} showEditor={showEditor}>
     <ThemeProvider theme={dark}>
       <>
-        <ConfiguratorWrapper>
-          <Configurator />
-        </ConfiguratorWrapper>
-        <EditorWrapper>
-          <Editor />
-        </EditorWrapper>
+        {showConfigurator ? (
+          <ConfiguratorWrapper>
+            <Configurator onFileClick={onFileClick} />
+          </ConfiguratorWrapper>
+        ) : null}
+        {showEditor ? (
+          <EditorWrapper>
+            <Editor />
+          </EditorWrapper>
+        ) : null}
       </>
     </ThemeProvider>
     <ThemeProvider theme={light}>
       <ViewerWrapper>
-        <Viewer />
+        <Viewer onEditClick={onEditClick} />
       </ViewerWrapper>
     </ThemeProvider>
   </StudioWrapper>

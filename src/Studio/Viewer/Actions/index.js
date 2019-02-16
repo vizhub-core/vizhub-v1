@@ -20,13 +20,13 @@ import download from '../../../svg/material-design/download-button.svg';
 
 export const formatVotes = format(',');
 
-export const Actions = ({ upvotes, downvotes }) => (
+export const Actions = ({ upvotes, downvotes, onEditClick }) => (
   <Wrapper>
     <Row>
       <Action>
         <Icon src={fork} /> Fork
       </Action>
-      <Action>
+      <Action onClick={onEditClick}>
         <Icon src={edit} /> Edit
       </Action>
       <Action>
