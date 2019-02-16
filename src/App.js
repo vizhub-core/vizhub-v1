@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { ThemeProvider } from 'styled-components';
 import { LoadingScreen } from './LoadingScreen';
 import { Studio } from './Studio';
 import { AppWrapper } from './styles';

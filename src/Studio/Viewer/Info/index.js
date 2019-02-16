@@ -6,7 +6,6 @@ import { avatarUrl } from '../avatarUrl';
 import {
   InfoWrapper,
   InfoAvatar,
-  infoAvatarHeight,
   Owner,
   OwnerNamePublishDate,
   OwnerName,
