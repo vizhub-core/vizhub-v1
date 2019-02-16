@@ -27,6 +27,18 @@ export const Viewer = withTheme(({ theme }) => {
   const viewCount = 1234;
   const upvotes = 2345;
   const downvotes = 5;
+  const comments = [
+    {
+      user: loggedInUser,
+      date: new Date(),
+      content: 'This is the text of the comment'
+    },
+    {
+      user: loggedInUser,
+      date: new Date(),
+      content: 'This is the text of the next comment'
+    }
+  ];
 
   return (
     <>
@@ -56,7 +68,7 @@ export const Viewer = withTheme(({ theme }) => {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </Description>
-        <Comments />
+        <Comments comments={comments} />
       </Padded>
     </>
   );

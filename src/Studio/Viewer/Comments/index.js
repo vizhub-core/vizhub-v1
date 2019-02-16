@@ -2,8 +2,10 @@ import React from 'react';
 
 import { Wrapper, Comment } from './styles';
 
-export const Comments = () => (
+export const Comments = ({ comments }) => (
   <Wrapper>
-    <Comment>Comment</Comment>
+    {comments.map(({ user, date, content }, i) => (
+      <Comment key={i}>{content}</Comment>
+    ))}
   </Wrapper>
 );
