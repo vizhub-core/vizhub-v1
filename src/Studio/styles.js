@@ -11,6 +11,7 @@ const ForegroundBackground = styled.div`
 
 export const ConfiguratorWrapper = styled(ForegroundBackground)`
   flex: 1;
+  overflow: auto;
 `;
 
 export const EditorWrapper = styled(ForegroundBackground)`
@@ -19,4 +20,5 @@ export const EditorWrapper = styled(ForegroundBackground)`
 
 export const ViewerWrapper = styled(ForegroundBackground)`
   flex: 4;
+  overflow: auto;
 `;
