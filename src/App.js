@@ -1,32 +1,27 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import { LoadingScreen } from './LoadingScreen';
-import { Studio } from './Studio';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { StudioPage } from './pages';
 import { AppWrapper } from './styles';
 
-export const App = () => {
-  const [loaded, setLoaded] = useState(false);
-  const [showConfigurator, setShowConfigorator] = useState(false);
-  const [showEditor, setShowEditor] = useState(false);
+const HomePage = () => (
+  <ul>
+    <li>
+      <Link to="/someuser/7893274327">Viewer</Link>
+    </li>
+    <li>
+      <Link to="/someuser/7893274327?edit">Configurator</Link>
+    </li>
+    <li>
+      <Link to="/someuser/7893274327?edit&file=index.js">Configurator</Link>
+    </li>
+  </ul>
+);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoaded(true);
-    }, 1000);
-  }, []);
-
-  const onEditClick = () => setShowConfigorator(!showConfigurator);
-  const onFileClick = () => setShowEditor(!showEditor);
-
-  const content = loaded ? (
-    <Studio
-      showConfigurator={showConfigurator}
-      showEditor={showEditor}
-      onEditClick={onEditClick}
-      onFileClick={onFileClick}
-    />
-  ) : (
-    <LoadingScreen />
-  );
-  return <AppWrapper>{content}</AppWrapper>;
-};
+export const App = () => (
+  <Router>
+    <AppWrapper>
+      <Route exact path="/" component={HomePage} />
+      <Route path="/:user/:id" component={StudioPage} />
+    </AppWrapper>
+  </Router>
+);
