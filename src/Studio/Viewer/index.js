@@ -1,4 +1,5 @@
 import React from 'react';
+import { withTheme } from 'styled-components';
 import logo from '../../svg/logo.svg';
 import { Info } from './Info';
 import { Actions } from './Actions';
@@ -11,11 +12,10 @@ import {
   InfoActions,
   Logo,
   HeaderAvatar,
-  headerHeight,
   Description
 } from './styles';
 
-export const Viewer = () => {
+export const Viewer = withTheme(({ theme }) => {
   // TODO get these from context.
   const loggedInUser = {
     gitHubId: '68416',
@@ -33,7 +33,7 @@ export const Viewer = () => {
       <Padded>
         <Header>
           <Logo src={logo} />
-          <HeaderAvatar src={avatarUrl(loggedInUser, headerHeight)} />
+          <HeaderAvatar src={avatarUrl(loggedInUser, theme.headerHeight)} />
         </Header>
       </Padded>
       <Runner />
@@ -60,4 +60,4 @@ export const Viewer = () => {
       </Padded>
     </>
   );
-};
+});

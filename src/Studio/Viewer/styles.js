@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-export const headerHeight = 32;
-
 export const Padded = styled.div`
   padding: 5px;
 `;
@@ -12,7 +10,7 @@ export const Header = styled.div`
 `;
 
 export const Logo = styled.img`
-  height: ${headerHeight}px;
+  height: ${props => props.theme.headerHeight}px;
 `;
 
 export const Runner = styled.div`
@@ -31,7 +29,7 @@ export const Avatar = styled.img`
 `;
 
 export const HeaderAvatar = styled(Avatar)`
-  height: ${headerHeight}px;
+  height: ${props => props.theme.headerHeight}px;
   cursor: pointer;
 `;
 
