@@ -1,29 +1,31 @@
 import queryString from 'query-string';
 
-export const getShowConfigurator = ({ location }) =>
-  queryString.parse(location.search).edit !== undefined;
+// Gets the value of a property in the location search query string.
+const get = property => ({ location }) =>
+  queryString.parse(location.search)[property];
 
-export const setShowConfigurator = ({ history, match, location }, value) => {
+// Sets the value of a property in the location search query string.
+const set = property => ({ history, match, location }, value) => {
+  const query = queryString.parse(location.search);
+  query[property] = value;
   history.push({
     pathname: match.url,
-    search: queryString.stringify(
-      Object.assign(queryString.parse(location.search), {
-        edit: value ? null : undefined
-      })
-    )
+    search: queryString.stringify(query)
   });
 };
 
-export const getFile = ({ location }) =>
-  queryString.parse(location.search).file;
+// A value of null means to show the configurator.
+// A value of undefined means to hide the configurator.
+// This behavior is inherited from query-string as the difference between
+// '?edit' (null) and '' (undefined) as the location search string.
+// If we used true and false here, we'd end up with verbose search strings like
+// '?edit=true' and '?edit=false', which we don't want.
+export const getShowConfigurator = get('edit');
+export const setShowConfigurator = set('edit');
 
-export const setFile = ({ history, match, location }, value) => {
-  history.push({
-    pathname: match.url,
-    search: queryString.stringify(
-      Object.assign(queryString.parse(location.search), {
-        file: value ? value : undefined
-      })
-    )
-  });
-};
+// A string file name value means to show the code editor with that file open.
+// e.g. '?file=index.js' in location search string.
+// A value of undefined means to hide the code editor.
+// e.g. '' in location search string.
+export const getFile = get('file');
+export const setFile = set('file');
