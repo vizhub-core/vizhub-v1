@@ -1,6 +1,7 @@
 const base = {
   headerHeight: 32,
-  infoAvatarHeight: 64
+  infoAvatarHeight: 64,
+  commentAvatarHeight: 32
 };
 
 export const light = Object.assign({}, base, {

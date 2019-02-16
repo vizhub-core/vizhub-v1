@@ -30,7 +30,7 @@ export const Viewer = withTheme(({ theme }) => {
   const comments = [
     {
       user: loggedInUser,
-      date: new Date(),
+      date: new Date('Fri Feb 15 2019'),
       content: 'This is the text of the comment'
     },
     {

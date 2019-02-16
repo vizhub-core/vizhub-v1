@@ -35,4 +35,5 @@ export const HeaderAvatar = styled(Avatar)`
 
 export const Description = styled.div`
   margin-top: 10px;
+  font-size: 1.1em;
 `;
