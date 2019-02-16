@@ -10,15 +10,15 @@ const ForegroundBackground = styled.div`
 `;
 
 export const ConfiguratorWrapper = styled(ForegroundBackground)`
-  flex: 1;
+  flex: 0 0 auto;
   overflow: auto;
 `;
 
 export const EditorWrapper = styled(ForegroundBackground)`
-  flex: 4;
+  flex: 1;
 `;
 
 export const ViewerWrapper = styled(ForegroundBackground)`
-  flex: 4;
+  flex: 1;
   overflow: auto;
 `;

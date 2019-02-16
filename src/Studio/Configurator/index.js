@@ -1,8 +1,8 @@
 import React from 'react';
-import { Section, File } from './styles';
+import { Wrapper, Section, File } from './styles';
 
 export const Configurator = ({ onFileClick }) => (
-  <>
+  <Wrapper>
     <Section>Design</Section>
     <input type="color" value="#e66465" readOnly /> Color
     <input type="range" min="0" max="100" value="50" readOnly /> Number
@@ -14,5 +14,5 @@ export const Configurator = ({ onFileClick }) => (
     <File onClick={onFileClick}>styles.css</File>
     <Section>Dependencies</Section>
     <Section>Settings</Section>
-  </>
+  </Wrapper>
 );
