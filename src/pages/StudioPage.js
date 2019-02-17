@@ -13,7 +13,7 @@ import {
 export const StudioPage = withRouter(props => {
   const [loaded, setLoaded] = useState(false);
 
-  const showConfigurator = getShowConfigurator(props) !== undefined;
+  const showConfigurator = getShowConfigurator(props);
 
   const file = getFile(props);
   const showEditor = file !== undefined;
@@ -24,8 +24,7 @@ export const StudioPage = withRouter(props => {
     }, 1000);
   }, []);
 
-  const onEditClick = () =>
-    setShowConfigurator(props, showConfigurator ? undefined : null);
+  const onEditClick = () => setShowConfigurator(props, !showConfigurator);
   const onFileClick = clickedFile =>
     setFile(props, clickedFile === file ? undefined : clickedFile);
 

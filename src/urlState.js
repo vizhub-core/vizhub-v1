@@ -20,8 +20,16 @@ const set = property => ({ history, match, location }, value) => {
 // '?edit' (null) and '' (undefined) as the location search string.
 // If we used true and false here, we'd end up with verbose search strings like
 // '?edit=true' and '?edit=false', which we don't want.
-export const getShowConfigurator = get('edit');
-export const setShowConfigurator = set('edit');
+const getShowConfiguratorQuery = get('edit');
+const setShowConfiguratorQuery = set('edit');
+
+// Returns true if configurator should be shown, false if not.
+export const getShowConfigurator = props =>
+  getShowConfiguratorQuery(props) !== undefined;
+
+// Accepts a boolean value for showConfigurator.
+export const setShowConfigurator = (props, showConfigurator) =>
+  setShowConfiguratorQuery(props, showConfigurator ? null : undefined);
 
 // A string file name value means to show the code editor with that file open.
 // e.g. '?file=index.js' in location search string.
