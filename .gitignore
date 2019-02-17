@@ -1,0 +1,10 @@
+node_modules
+package-lock.json
+dist
+yarn.lock
+yarn-error.log
+lerna-debug.log
+.next
+*.swp
+*.autosave
+.env
