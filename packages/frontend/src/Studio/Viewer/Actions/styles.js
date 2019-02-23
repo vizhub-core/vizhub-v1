@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { SmallText } from '../styles';
 
 const desktopOnlyMedia = `
   @media (max-width: 700px) {
@@ -6,11 +7,9 @@ const desktopOnlyMedia = `
   }
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(SmallText)`
   max-width: 90px;
   min-width: 62px;
-  font-size: 0.8em;
-  color: ${props => props.theme.textLight};
   background: white;
   border: none;
   flex: 1;

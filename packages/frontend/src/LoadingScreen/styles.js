@@ -11,11 +11,11 @@ export const LoadingScreenWrapper = styled.div`
 `;
 
 const spin = keyframes`
-  from { transform: rotate(-5deg) scale(0.2); }
-  to { transform: rotate(360deg) scale(1); }
+  from { transform: rotate(-10deg) scale(0.5); }
+  to { transform: rotate(360deg) scale(2); }
 `;
 
 export const SpinningImage = styled.img`
-  animation: ${spin} infinite 50s linear;
+  animation: ${spin} infinite 20s linear;
   height: 25vmin;
 `;

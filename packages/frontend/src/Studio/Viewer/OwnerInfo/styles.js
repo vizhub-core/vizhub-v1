@@ -15,13 +15,3 @@ export const OwnerNamePublishDate = styled.div`
   flex-direction: column;
   justify-content: center;
 `;
-
-export const OwnerName = styled.div`
-  color: ${props => props.theme.textMain};
-  font-weight: bold;
-`;
-
-export const PublishDate = styled.div`
-  color: ${props => props.theme.textLight};
-  font-size: 0.8em;
-`;

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Avatar } from '../styles';
+import { MainText, SmallText } from '../styles';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -18,20 +19,19 @@ export const CommentAvatar = styled(Avatar)`
   margin-right: 5px;
 `;
 
-export const Left = styled.div``;
 export const Right = styled.div`
   margin-left: 4px;
 `;
 
-export const UserName = styled.span`
-  font-weight: bold;
+export const Time = styled(SmallText)`
+  margin-left: 10px;
 `;
 
-export const Time = styled.span`
-  margin-left: 15px;
-  font-size: 0.8em;
-`;
-
-export const Content = styled.div`
+export const Content = styled(MainText)`
   margin-top: 2px;
+`;
+
+export const AuthorNameTime = styled.div`
+  display: flex;
+  align-items: flex-end;
 `;

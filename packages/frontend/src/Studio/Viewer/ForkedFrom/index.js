@@ -1,9 +1,10 @@
 import React from 'react';
-import { Wrapper, ForkedFromText, ForkedFromViz } from './styles';
+import { Wrapper, ForkedFromViz } from './styles';
+import { SmallText } from '../styles';
 
 export const ForkedFrom = () => (
   <Wrapper>
-    <ForkedFromText>Forked from:</ForkedFromText>
+    <SmallText>Forked from:</SmallText>
     <ForkedFromViz />
   </Wrapper>
 );

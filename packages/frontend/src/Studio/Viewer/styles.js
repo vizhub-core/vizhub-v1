@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+export const MainText = styled.div`
+  color: ${props => props.theme.textMain};
+`;
+
+export const SmallText = styled.div`
+  font-size: 0.8em;
+  color: ${props => props.theme.textLight};
+`;
+
 export const Wrapper = styled.div`
   max-width: 980px;
 `;
@@ -22,6 +31,11 @@ export const Runner = styled.div`
   background-color: #ddd;
 `;
 
+export const Title = styled(MainText)`
+  font-size: 1.5em;
+  margin-bottom: 2px;
+`;
+
 export const TitleActions = styled.div`
   display: flex;
   justify-content: space-between;
@@ -31,17 +45,6 @@ export const TitleActions = styled.div`
 export const TitleViewCount = styled.div`
   display: flex;
   flex-direction: column;
-`;
-
-export const Title = styled.div`
-  font-size: 1.3em;
-  margin-bottom: 2px;
-  color: ${props => props.theme.textMain};
-`;
-
-export const ViewCount = styled.div`
-  font-size: 0.8em;
-  color: ${props => props.theme.textLight};
 `;
 
 export const Actions = styled.div`
@@ -60,12 +63,14 @@ export const HeaderAvatar = styled(Avatar)`
   cursor: pointer;
 `;
 
-export const Description = styled.div`
+// Aligns the description to match the author name.
+const authorAlign = ({ theme }) =>
+  theme.infoAvatarHeight + theme.infoAvatarPadding;
+
+export const Description = styled(MainText)`
   font-size: 1.1em;
-  color: ${props => props.theme.textMain};
   @media (min-width: 700px) {
-    margin-left: ${props =>
-      props.theme.infoAvatarHeight + props.theme.infoAvatarPadding}px;
+    margin-left: ${authorAlign}px;
   }
 `;
 
@@ -75,4 +80,9 @@ export const Provenance = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+`;
+
+export const AuthorName = styled.div`
+  color: ${props => props.theme.textMain};
+  font-weight: bold;
 `;

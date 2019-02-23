@@ -1,31 +1,31 @@
 import React from 'react';
 import { withTheme } from 'styled-components';
 import { avatarUrl } from '../avatarUrl';
+import { AuthorName } from '../styles';
 import TimeAgo from 'timeago-react';
 
 import {
   Wrapper,
   Comment,
   CommentAvatar,
-  Left,
   Right,
-  UserName,
   Time,
-  Content
+  Content,
+  AuthorNameTime
 } from './styles';
 
 export const Comments = withTheme(({ theme, comments }) => (
   <Wrapper>
     {comments.map(({ user, date, content }, i) => (
       <Comment key={i}>
-        <Left>
-          <CommentAvatar src={avatarUrl(user, theme.infoAvatarHeight)} />
-        </Left>
+        <CommentAvatar src={avatarUrl(user, theme.infoAvatarHeight)} />
         <Right>
-          <UserName>{user.name}</UserName>
-          <Time>
-            <TimeAgo datetime={date} />
-          </Time>
+          <AuthorNameTime>
+            <AuthorName>{user.name}</AuthorName>
+            <Time>
+              <TimeAgo datetime={date} />
+            </Time>
+          </AuthorNameTime>
           <Content>{content}</Content>
         </Right>
       </Comment>

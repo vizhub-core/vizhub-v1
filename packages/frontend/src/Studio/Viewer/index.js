@@ -27,7 +27,7 @@ import {
   TitleViewCount,
   Actions,
   Title,
-  ViewCount,
+  SmallText,
   Provenance
 } from './styles';
 
@@ -69,7 +69,7 @@ export const Viewer = withTheme(({ theme, onEditClick }) => {
         <Padded>
           <TitleViewCount>
             <Title>{title}</Title>
-            <ViewCount>{formatViewCount(viewCount)} views</ViewCount>
+            <SmallText>{formatViewCount(viewCount)} views</SmallText>
           </TitleViewCount>
         </Padded>
         <Actions>
