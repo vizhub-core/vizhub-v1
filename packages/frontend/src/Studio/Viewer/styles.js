@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Padded = styled.div`
-  padding: 5px;
+  padding: 10px;
 `;
 
 export const Header = styled.div`
@@ -41,11 +41,19 @@ export const Provenance = styled.div`
 export const TitlePrimaryActions = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+`;
+
+export const Title = styled.div`
+  font-size: 1.3em;
+  margin-bottom: 6px;
+  color: ${props => props.theme.textMain};
 `;
 
 export const ViewCountSecondaryActions = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 `;
 
 export const Avatar = styled.img`

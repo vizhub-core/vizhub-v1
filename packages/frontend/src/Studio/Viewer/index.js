@@ -1,7 +1,6 @@
 import React from 'react';
 import { withTheme } from 'styled-components';
 import logo from '../../svg/logo.svg';
-import { Title } from './Title';
 import { ViewCount } from './ViewCount';
 import { OwnerInfo } from './OwnerInfo';
 import { PrimaryActions, SecondaryActions } from './Actions';
@@ -18,7 +17,8 @@ import {
   HeaderAvatar,
   Description,
   TitlePrimaryActions,
-  ViewCountSecondaryActions
+  ViewCountSecondaryActions,
+  Title
 } from './styles';
 
 export const Viewer = withTheme(({ theme, onEditClick }) => {
@@ -57,7 +57,7 @@ export const Viewer = withTheme(({ theme, onEditClick }) => {
       <Runner />
       <Padded>
         <TitlePrimaryActions>
-          <Title title={title} />
+          <Title> {title}</Title>
           <PrimaryActions onEditClick={onEditClick} />
         </TitlePrimaryActions>
         <ViewCountSecondaryActions>
