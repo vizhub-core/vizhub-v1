@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Padded = styled.div`
-  padding: 10px;
+  padding: 8px;
 `;
 
 export const Header = styled.div`
@@ -62,12 +62,12 @@ export const HeaderAvatar = styled(Avatar)`
 `;
 
 export const Description = styled.div`
-  margin-top: 10px;
   font-size: 1.1em;
+  color: ${props => props.theme.textMain};
 `;
 
 export const Provenance = styled.div`
-  margin: 10px 0 0 5px;
+  margin: 10px 0px 4px 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;

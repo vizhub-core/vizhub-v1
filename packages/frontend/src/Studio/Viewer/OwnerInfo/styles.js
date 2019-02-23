@@ -19,10 +19,9 @@ export const OwnerNamePublishDate = styled.div`
 export const OwnerName = styled.div`
   color: ${props => props.theme.textMain};
   font-weight: bold;
-  line-height: 1.6em;
 `;
 
 export const PublishDate = styled.div`
   color: ${props => props.theme.textLight};
-  font-size: 0.9em;
+  font-size: 0.8em;
 `;
