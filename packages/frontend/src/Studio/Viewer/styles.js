@@ -63,6 +63,9 @@ export const HeaderAvatar = styled(Avatar)`
 export const Description = styled.div`
   font-size: 1.1em;
   color: ${props => props.theme.textMain};
+  @media (min-width: 700px) {
+    margin-left: ${props => props.theme.infoAvatarHeight + props.theme.infoAvatarPadding}px;
+  }
 `;
 
 export const Provenance = styled.div`

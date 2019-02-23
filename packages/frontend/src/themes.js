@@ -1,6 +1,7 @@
 const base = {
   headerHeight: 32,
   infoAvatarHeight: 64,
+  infoAvatarPadding: 12,
   commentAvatarHeight: 32
 };
 

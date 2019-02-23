@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 `;
 
 export const OwnerNamePublishDate = styled.div`
-  margin-left: 12px;
+  margin-left: ${props => props.theme.infoAvatarPadding}px;
   display: flex;
   flex-direction: column;
   justify-content: center;
