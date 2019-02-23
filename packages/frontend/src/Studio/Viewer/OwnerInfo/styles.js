@@ -5,12 +5,7 @@ export const InfoAvatar = styled(Avatar)`
   height: ${props => props.theme.infoAvatarHeight}px;
 `;
 
-export const InfoWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-export const Owner = styled.div`
+export const Wrapper = styled.div`
   display: flex;
 `;
 
@@ -28,14 +23,4 @@ export const OwnerName = styled.div`
 
 export const PublishDate = styled.div`
   font-size: 0.9em;
-`;
-
-export const Title = styled.div`
-  font-size: 1.5em;
-  margin-bottom: 6px;
-`;
-
-export const ViewCount = styled.div`
-  font-size: 0.8em;
-  margin-bottom: 10px;
 `;

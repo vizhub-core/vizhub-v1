@@ -25,6 +25,9 @@ export const Runner = styled.div`
 export const InfoActions = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 export const Avatar = styled.img`

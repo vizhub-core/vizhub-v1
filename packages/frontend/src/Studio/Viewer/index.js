@@ -1,7 +1,8 @@
 import React from 'react';
 import { withTheme } from 'styled-components';
 import logo from '../../svg/logo.svg';
-import { Info } from './Info';
+import { VizInfo } from './VizInfo';
+import { OwnerInfo } from './OwnerInfo';
 import { Actions } from './Actions';
 import { Comments } from './Comments';
 import { avatarUrl } from './avatarUrl';
@@ -52,12 +53,8 @@ export const Viewer = withTheme(({ theme, onEditClick }) => {
       <Runner />
       <Padded>
         <InfoActions>
-          <Info
-            title={title}
-            viewCount={viewCount}
-            user={ownerUser}
-            publishDate={publishDate}
-          />
+          <VizInfo title={title} viewCount={viewCount} />
+          <OwnerInfo user={ownerUser} publishDate={publishDate} />
           <Actions
             upvotes={upvotes}
             downvotes={downvotes}
