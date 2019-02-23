@@ -7,6 +7,7 @@ export const InfoAvatar = styled(Avatar)`
 
 export const Wrapper = styled.div`
   display: flex;
+  font-size: 1.1em;
 `;
 
 export const OwnerNamePublishDate = styled.div`
