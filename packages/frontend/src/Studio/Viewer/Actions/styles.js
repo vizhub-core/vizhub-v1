@@ -1,31 +1,21 @@
 import styled from 'styled-components';
 
-//export const Wrapper = styled.div`
-//  display: flex;
-//  flex-direction: column;
-//`;
-
-export const Row = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`;
-
 export const Action = styled.button`
   font-size: 1em;
   background: white;
-  margin: 2px 0 2px 4px;
+  margin: 0;
   border: 1px solid black;
-  border-radius: 2px;
+  flex: 1;
   cursor: pointer;
-  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const Icon = styled.img`
-  height: 80%;
-  vertical-align: text-bottom;
+  width: 35px;
 `;
 
 export const ActionSVG = styled.svg`
-  cursor: pointer;
-  fill: ${props => props.textMain}
+  fill: ${props => props.theme.textLight}
 `;

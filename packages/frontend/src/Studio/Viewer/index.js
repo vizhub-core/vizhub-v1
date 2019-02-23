@@ -2,7 +2,15 @@ import React from 'react';
 import {withTheme} from 'styled-components';
 import logo from '../../svg/logo.svg';
 import {OwnerInfo} from './OwnerInfo';
-import {FullScreen, PrimaryActions, SecondaryActions} from './Actions';
+import {
+  FullScreen,
+  Fork,
+  Edit,
+  Upvote,
+  Downvote,
+  Share,
+  Download,
+} from './Actions';
 import {Comments} from './Comments';
 import {ForkedFrom} from './ForkedFrom';
 import {avatarUrl} from './avatarUrl';
@@ -64,10 +72,16 @@ export const Viewer = withTheme(({theme, onEditClick}) => {
           </TitleViewCount>
           <FullScreen />
         </Spaced>
-        <Actions>
-          <PrimaryActions onEditClick={onEditClick} />
-          <SecondaryActions upvotes={upvotes} downvotes={downvotes} />
-        </Actions>
+      </Padded>
+      <Actions>
+        <Fork />
+        <Edit onEditClick={onEditClick} />
+        <Upvote upvotes={upvotes} />
+        <Downvote downvotes={downvotes} />
+        <Share />
+        <Download />
+      </Actions>
+      <Padded>
         <Spaced>
           <OwnerInfo user={ownerUser} publishDate={publishDate} />
           <ForkedFrom />
