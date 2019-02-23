@@ -1,17 +1,20 @@
 import React from 'react';
-import {format} from 'd3-format';
-import {Action, Icon, ActionSVG} from './styles';
-import {ForkSVG, FullScreenSVG} from './svg';
-import edit from '../../../svg/octicons/pencil.svg';
-import upvote from '../../../svg/octicons/thumbsup.svg';
-import downvote from '../../../svg/octicons/thumbsdown.svg';
-import share from '../../../svg/material-design/forward-arrow.svg';
-import download from '../../../svg/material-design/download-button.svg';
+import { format } from 'd3-format';
+import { Action} from './styles';
+import {
+  ForkSVG,
+  FullScreenSVG,
+  EditSVG,
+  UpvoteSVG,
+  DownvoteSVG,
+  ShareSVG,
+  DownloadSVG
+} from './svg';
 
 export const formatVotes = format(',');
 
 export const FullScreen = () => (
-  <div style={{width: '40px', height: '40px'}}>
+  <div style={{ width: '40px', height: '40px' }}>
     <FullScreenSVG />
   </div>
 );
@@ -22,33 +25,33 @@ export const Fork = () => (
   </Action>
 );
 
-export const Edit = ({onEditClick}) => (
+export const Edit = ({ onEditClick }) => (
   <Action onClick={onEditClick}>
-    <Icon src={edit} /> Edit
+    <EditSVG /> Edit
   </Action>
 );
 
-export const Upvote = ({upvotes}) => (
+export const Upvote = ({ upvotes }) => (
   <Action>
-    <Icon src={upvote} /> {formatVotes(upvotes)}
+    <UpvoteSVG /> {formatVotes(upvotes)}
   </Action>
 );
 
-export const Downvote = ({downvotes}) => (
+export const Downvote = ({ downvotes }) => (
   <Action>
-    <Icon src={downvote} /> {formatVotes(downvotes)}
+    <DownvoteSVG /> {formatVotes(downvotes)}
   </Action>
 );
 
 export const Share = () => (
   <Action>
-    <Icon src={share} />
+    <ShareSVG />
     Share
   </Action>
 );
 
 export const Download = () => (
   <Action>
-    <Icon src={download} />
+    <DownloadSVG /> Download
   </Action>
 );

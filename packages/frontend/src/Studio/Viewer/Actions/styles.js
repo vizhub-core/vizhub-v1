@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Action = styled.button`
+export const Action = styled.div`
   font-size: 1em;
   background: white;
   margin: 0;
@@ -12,10 +12,10 @@ export const Action = styled.button`
   justify-content: center;
 `;
 
-export const Icon = styled.img`
-  width: 35px;
-`;
+//export const Icon = styled.img`
+//  width: 35px;
+//`;
 
-export const ActionSVG = styled.svg`
-  fill: ${props => props.theme.textLight}
+export const SVG = styled.svg`
+  fill: ${props => props.theme.textLight};
 `;

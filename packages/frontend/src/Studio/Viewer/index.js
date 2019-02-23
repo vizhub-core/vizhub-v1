@@ -1,7 +1,7 @@
 import React from 'react';
-import {withTheme} from 'styled-components';
+import { withTheme } from 'styled-components';
 import logo from '../../svg/logo.svg';
-import {OwnerInfo} from './OwnerInfo';
+import { OwnerInfo } from './OwnerInfo';
 import {
   FullScreen,
   Fork,
@@ -9,12 +9,12 @@ import {
   Upvote,
   Downvote,
   Share,
-  Download,
+  Download
 } from './Actions';
-import {Comments} from './Comments';
-import {ForkedFrom} from './ForkedFrom';
-import {avatarUrl} from './avatarUrl';
-import {formatViewCount} from './formatViewCount';
+import { Comments } from './Comments';
+import { ForkedFrom } from './ForkedFrom';
+import { avatarUrl } from './avatarUrl';
+import { formatViewCount } from './formatViewCount';
 import {
   Wrapper,
   Padded,
@@ -27,14 +27,14 @@ import {
   TitleViewCount,
   Actions,
   Title,
-  ViewCount,
+  ViewCount
 } from './styles';
 
-export const Viewer = withTheme(({theme, onEditClick}) => {
+export const Viewer = withTheme(({ theme, onEditClick }) => {
   // TODO get these from context.
   const loggedInUser = {
     gitHubId: '68416',
-    name: 'Curran Kelleher',
+    name: 'Curran Kelleher'
   };
   const ownerUser = loggedInUser;
   const publishDate = new Date();
@@ -46,13 +46,13 @@ export const Viewer = withTheme(({theme, onEditClick}) => {
     {
       user: loggedInUser,
       date: new Date('Fri Feb 15 2019'),
-      content: 'This is the text of the comment',
+      content: 'This is the text of the comment'
     },
     {
       user: loggedInUser,
       date: new Date(),
-      content: 'This is the text of the next comment',
-    },
+      content: 'This is the text of the next comment'
+    }
   ];
 
   return (
