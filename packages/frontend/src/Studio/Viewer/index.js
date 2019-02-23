@@ -5,6 +5,7 @@ import { VizInfo } from './VizInfo';
 import { OwnerInfo } from './OwnerInfo';
 import { Actions } from './Actions';
 import { Comments } from './Comments';
+import { ForkedFrom } from './ForkedFrom';
 import { avatarUrl } from './avatarUrl';
 import {
   Wrapper,
@@ -60,6 +61,7 @@ export const Viewer = withTheme(({ theme, onEditClick }) => {
             downvotes={downvotes}
             onEditClick={onEditClick}
           />
+          <ForkedFrom />
         </InfoActions>
         <Description>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
