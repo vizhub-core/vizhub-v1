@@ -1,6 +1,6 @@
 import React from 'react';
 import { format } from 'd3-format';
-import { Wrapper, Row, Action, Icon } from './styles';
+import { Row, Action, Icon } from './styles';
 import fork from '../../../svg/octicons/repo-forked.svg';
 import edit from '../../../svg/octicons/pencil.svg';
 import fullscreen from '../../../svg/material-design/fullscreen.svg';
@@ -11,33 +11,41 @@ import download from '../../../svg/material-design/download-button.svg';
 
 export const formatVotes = format(',');
 
-export const Actions = ({ upvotes, downvotes, onEditClick }) => (
-  <Wrapper>
-    <Row>
-      <Action>
-        <Icon src={fork} /> Fork
-      </Action>
-      <Action onClick={onEditClick}>
-        <Icon src={edit} /> Edit
-      </Action>
-      <Action>
-        <Icon src={fullscreen} />
-      </Action>
-    </Row>
-    <Row>
-      <Action>
-        <Icon src={upvote} /> {formatVotes(upvotes)}
-      </Action>
-      <Action>
-        <Icon src={downvote} /> {formatVotes(downvotes)}
-      </Action>
-      <Action>
-        <Icon src={share} />
-        Share
-      </Action>
-      <Action>
-        <Icon src={download} />
-      </Action>
-    </Row>
-  </Wrapper>
+export const PrimaryActions = ({ onEditClick }) => (
+  <Row>
+    <Action>
+      <Icon src={fork} /> Fork
+    </Action>
+    <Action onClick={onEditClick}>
+      <Icon src={edit} /> Edit
+    </Action>
+    <Action>
+      <Icon src={fullscreen} />
+    </Action>
+  </Row>
 );
+
+export const SecondaryActions = ({ upvotes, downvotes }) => (
+  <Row>
+    <Action>
+      <Icon src={upvote} /> {formatVotes(upvotes)}
+    </Action>
+    <Action>
+      <Icon src={downvote} /> {formatVotes(downvotes)}
+    </Action>
+    <Action>
+      <Icon src={share} />
+      Share
+    </Action>
+    <Action>
+      <Icon src={download} />
+    </Action>
+  </Row>
+);
+
+//export const Actions = ({upvotes, downvotes, onEditClick}) => (
+//  <Wrapper>
+//      <PrimaryActions onEditClick={onEditClick} />
+//      <SecondaryActions upvotes={upvotes} downvotes={downvotes} />
+//  </Wrapper>
+//);

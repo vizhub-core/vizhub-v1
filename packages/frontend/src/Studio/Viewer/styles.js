@@ -22,17 +22,28 @@ export const Runner = styled.div`
   background-color: #ddd;
 `;
 
-const mobile = '500px';
+//const mobile = '500px';
 
-export const InfoActions = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: ${mobile}) {
-    flex-direction: column;
-  }
-`;
+//export const InfoActions = styled.div`
+//  display: flex;
+//  justify-content: space-between;
+//  @media (max-width: ${mobile}) {
+//    flex-direction: column;
+//  }
+//`;
 
 export const Provenance = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
+
+export const TitlePrimaryActions = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const ViewCountSecondaryActions = styled.div`
   display: flex;
   justify-content: space-between;
 `;

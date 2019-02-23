@@ -4,7 +4,7 @@ import logo from '../../svg/logo.svg';
 import { Title } from './Title';
 import { ViewCount } from './ViewCount';
 import { OwnerInfo } from './OwnerInfo';
-import { Actions } from './Actions';
+import { PrimaryActions, SecondaryActions } from './Actions';
 import { Comments } from './Comments';
 import { ForkedFrom } from './ForkedFrom';
 import { avatarUrl } from './avatarUrl';
@@ -13,11 +13,12 @@ import {
   Padded,
   Header,
   Runner,
-  InfoActions,
   Provenance,
   Logo,
   HeaderAvatar,
-  Description
+  Description,
+  TitlePrimaryActions,
+  ViewCountSecondaryActions
 } from './styles';
 
 export const Viewer = withTheme(({ theme, onEditClick }) => {
@@ -55,15 +56,14 @@ export const Viewer = withTheme(({ theme, onEditClick }) => {
       </Padded>
       <Runner />
       <Padded>
-        <Title title={title} />
-        <ViewCount viewCount={viewCount} />
-        <InfoActions>
-          <Actions
-            upvotes={upvotes}
-            downvotes={downvotes}
-            onEditClick={onEditClick}
-          />
-        </InfoActions>
+        <TitlePrimaryActions>
+          <Title title={title} />
+          <PrimaryActions onEditClick={onEditClick} />
+        </TitlePrimaryActions>
+        <ViewCountSecondaryActions>
+          <ViewCount viewCount={viewCount} />
+          <SecondaryActions upvotes={upvotes} downvotes={downvotes} />
+        </ViewCountSecondaryActions>
         <Provenance>
           <OwnerInfo user={ownerUser} publishDate={publishDate} />
           <ForkedFrom />
