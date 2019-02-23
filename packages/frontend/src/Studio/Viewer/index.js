@@ -1,7 +1,8 @@
 import React from 'react';
 import { withTheme } from 'styled-components';
 import logo from '../../svg/logo.svg';
-import { VizInfo } from './VizInfo';
+import { Title } from './Title';
+import { ViewCount } from './ViewCount';
 import { OwnerInfo } from './OwnerInfo';
 import { Actions } from './Actions';
 import { Comments } from './Comments';
@@ -13,6 +14,7 @@ import {
   Header,
   Runner,
   InfoActions,
+  Provenance,
   Logo,
   HeaderAvatar,
   Description
@@ -53,16 +55,19 @@ export const Viewer = withTheme(({ theme, onEditClick }) => {
       </Padded>
       <Runner />
       <Padded>
+        <Title title={title} />
+        <ViewCount viewCount={viewCount} />
         <InfoActions>
-          <VizInfo title={title} viewCount={viewCount} />
-          <OwnerInfo user={ownerUser} publishDate={publishDate} />
           <Actions
             upvotes={upvotes}
             downvotes={downvotes}
             onEditClick={onEditClick}
           />
-          <ForkedFrom />
         </InfoActions>
+        <Provenance>
+          <OwnerInfo user={ownerUser} publishDate={publishDate} />
+          <ForkedFrom />
+        </Provenance>
         <Description>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

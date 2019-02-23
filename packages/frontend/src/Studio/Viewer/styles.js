@@ -22,12 +22,19 @@ export const Runner = styled.div`
   background-color: #ddd;
 `;
 
+const mobile = '500px';
+
 export const InfoActions = styled.div`
   display: flex;
   justify-content: space-between;
-  @media (max-width: 500px) {
+  @media (max-width: ${mobile}) {
     flex-direction: column;
   }
+`;
+
+export const Provenance = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const Avatar = styled.img`
