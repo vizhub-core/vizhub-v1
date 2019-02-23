@@ -1,16 +1,14 @@
 import styled from 'styled-components';
-import { Avatar } from '../styles';
-import { MainText, SmallText } from '../styles';
+import { Avatar, MainText, SmallText } from '../styles';
+import { Flex } from '../../../styles';
 
-export const Wrapper = styled.div`
-  display: flex;
+export const Wrapper = styled(Flex)`
   flex-direction: column;
   margin-top: 10px;
   margin-left: 5px;
 `;
 
-export const Comment = styled.div`
-  display: flex;
+export const Comment = styled(Flex)`
   margin-top: 14px;
 `;
 
@@ -31,7 +29,6 @@ export const Content = styled(MainText)`
   margin-top: 2px;
 `;
 
-export const AuthorNameTime = styled.div`
-  display: flex;
+export const AuthorNameTime = styled(Flex)`
   align-items: flex-end;
 `;

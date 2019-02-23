@@ -1,12 +1,12 @@
 import styled from 'styled-components';
+import { Flex } from '../styles';
 
-export const StudioWrapper = styled.div`
+export const StudioWrapper = styled(Flex)`
   flex: 1;
-  display: flex;
   overflow: hidden;
 `;
 
-const ForegroundBackground = styled.div`
+const ForegroundBackground = styled(Flex)`
   background: ${props => props.theme.background};
   color: ${props => props.theme.foreground};
 `;
@@ -19,13 +19,11 @@ export const ConfiguratorWrapper = styled(ForegroundBackground)`
 export const EditorWrapper = styled(ForegroundBackground)`
   flex: 1;
   overflow: auto;
-  display: flex;
   height: 100%;
 `;
 
 export const ViewerWrapper = styled(ForegroundBackground)`
   flex: 1;
   overflow: auto;
-  display: flex;
   justify-content: center;
 `;

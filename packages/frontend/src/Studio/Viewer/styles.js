@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Flex } from '../../styles';
 
 export const MainText = styled.div`
   color: ${props => props.theme.textMain};
@@ -17,8 +18,7 @@ export const Padded = styled.div`
   padding: 8px;
 `;
 
-export const Header = styled.div`
-  display: flex;
+export const Header = styled(Flex)`
   justify-content: space-between;
 `;
 
@@ -36,20 +36,17 @@ export const Title = styled(MainText)`
   margin-bottom: 2px;
 `;
 
-export const TitleActions = styled.div`
-  display: flex;
+export const TitleActions = styled(Flex)`
   justify-content: space-between;
   flex-wrap: wrap;
 `;
 
-export const TitleViewCount = styled.div`
-  display: flex;
+export const TitleViewCount = styled(Flex)`
   flex-direction: column;
 `;
 
-export const Actions = styled.div`
+export const Actions = styled(Flex)`
   flex: 1;
-  display: flex;
   justify-content: flex-end;
 `;
 
@@ -74,9 +71,8 @@ export const Description = styled(MainText)`
   }
 `;
 
-export const Provenance = styled.div`
+export const Provenance = styled(Flex)`
   margin: 10px 0px 4px 8px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
