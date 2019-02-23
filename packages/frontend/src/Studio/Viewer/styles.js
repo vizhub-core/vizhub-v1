@@ -32,25 +32,30 @@ export const Runner = styled.div`
 //  }
 //`;
 
-export const Provenance = styled.div`
+export const Spaced = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 `;
 
-export const TitlePrimaryActions = styled.div`
+export const TitleViewCount = styled.div`
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 10px;
 `;
 
 export const Title = styled.div`
   font-size: 1.3em;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   color: ${props => props.theme.textMain};
 `;
 
-export const ViewCountSecondaryActions = styled.div`
+export const ViewCount = styled.div`
+  font-size: 0.8em;
+  color: ${props => props.theme.textLight};
+`;
+
+export const Actions = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

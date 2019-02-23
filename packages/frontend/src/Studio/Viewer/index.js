@@ -1,31 +1,32 @@
 import React from 'react';
-import { withTheme } from 'styled-components';
+import {withTheme} from 'styled-components';
 import logo from '../../svg/logo.svg';
-import { ViewCount } from './ViewCount';
-import { OwnerInfo } from './OwnerInfo';
-import { PrimaryActions, SecondaryActions } from './Actions';
-import { Comments } from './Comments';
-import { ForkedFrom } from './ForkedFrom';
-import { avatarUrl } from './avatarUrl';
+import {OwnerInfo} from './OwnerInfo';
+import {FullScreen, PrimaryActions, SecondaryActions} from './Actions';
+import {Comments} from './Comments';
+import {ForkedFrom} from './ForkedFrom';
+import {avatarUrl} from './avatarUrl';
+import {formatViewCount} from './formatViewCount';
 import {
   Wrapper,
   Padded,
   Header,
   Runner,
-  Provenance,
+  Spaced,
   Logo,
   HeaderAvatar,
   Description,
-  TitlePrimaryActions,
-  ViewCountSecondaryActions,
-  Title
+  TitleViewCount,
+  Actions,
+  Title,
+  ViewCount,
 } from './styles';
 
-export const Viewer = withTheme(({ theme, onEditClick }) => {
+export const Viewer = withTheme(({theme, onEditClick}) => {
   // TODO get these from context.
   const loggedInUser = {
     gitHubId: '68416',
-    name: 'Curran Kelleher'
+    name: 'Curran Kelleher',
   };
   const ownerUser = loggedInUser;
   const publishDate = new Date();
@@ -37,13 +38,13 @@ export const Viewer = withTheme(({ theme, onEditClick }) => {
     {
       user: loggedInUser,
       date: new Date('Fri Feb 15 2019'),
-      content: 'This is the text of the comment'
+      content: 'This is the text of the comment',
     },
     {
       user: loggedInUser,
       date: new Date(),
-      content: 'This is the text of the next comment'
-    }
+      content: 'This is the text of the next comment',
+    },
   ];
 
   return (
@@ -56,18 +57,21 @@ export const Viewer = withTheme(({ theme, onEditClick }) => {
       </Padded>
       <Runner />
       <Padded>
-        <TitlePrimaryActions>
-          <Title> {title}</Title>
+        <Spaced>
+          <TitleViewCount>
+            <Title>{title}</Title>
+            <ViewCount>{formatViewCount(viewCount)} views</ViewCount>
+          </TitleViewCount>
+          <FullScreen />
+        </Spaced>
+        <Actions>
           <PrimaryActions onEditClick={onEditClick} />
-        </TitlePrimaryActions>
-        <ViewCountSecondaryActions>
-          <ViewCount viewCount={viewCount} />
           <SecondaryActions upvotes={upvotes} downvotes={downvotes} />
-        </ViewCountSecondaryActions>
-        <Provenance>
+        </Actions>
+        <Spaced>
           <OwnerInfo user={ownerUser} publishDate={publishDate} />
           <ForkedFrom />
-        </Provenance>
+        </Spaced>
         <Description>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

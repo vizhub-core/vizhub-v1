@@ -17,9 +17,15 @@ export const Action = styled.button`
   border: 1px solid black;
   border-radius: 2px;
   cursor: pointer;
+  height: 50px;
 `;
 
 export const Icon = styled.img`
-  height: 1em;
+  height: 80%;
   vertical-align: text-bottom;
+`;
+
+export const ActionSVG = styled.svg`
+  cursor: pointer;
+  fill: ${props => props.textMain}
 `;
