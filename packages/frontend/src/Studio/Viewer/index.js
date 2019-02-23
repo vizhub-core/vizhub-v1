@@ -75,7 +75,7 @@ export const Viewer = withTheme(({ theme, onEditClick }) => {
       </Padded>
       <Actions>
         <Fork />
-        <Edit onEditClick={onEditClick} />
+        <Edit onClick={onEditClick} />
         <Upvote upvotes={upvotes} />
         <Downvote downvotes={downvotes} />
         <Share />

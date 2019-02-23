@@ -41,7 +41,6 @@ export const Spaced = styled.div`
 export const TitleViewCount = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
 `;
 
 export const Title = styled.div`
@@ -58,6 +57,7 @@ export const ViewCount = styled.div`
 export const Actions = styled.div`
   display: flex;
   justify-content: space-evenly;
+  align-items: flex-end;
   flex-wrap: wrap;
 `;
 
