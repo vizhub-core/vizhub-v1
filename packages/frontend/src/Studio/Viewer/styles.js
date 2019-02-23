@@ -22,7 +22,7 @@ export const Runner = styled.div`
   background-color: #ddd;
 `;
 
-export const Spaced = styled.div`
+export const TitleActions = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -45,10 +45,9 @@ export const ViewCount = styled.div`
 `;
 
 export const Actions = styled.div`
+  flex: 1;
   display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  flex-wrap: wrap;
+  justify-content: flex-end;
 `;
 
 export const Avatar = styled.img`

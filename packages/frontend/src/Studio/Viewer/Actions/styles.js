@@ -7,10 +7,11 @@ const desktopOnlyMedia = `
 `;
 
 export const Wrapper = styled.div`
+  max-width: 90px;
+  min-width: 62px;
   font-size: 0.8em;
   color: ${props => props.theme.textLight};
   background: white;
-  margin: 0;
   border: none;
   flex: 1;
   cursor: pointer;
@@ -18,7 +19,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  ${props => props.desktopOnly ? desktopOnlyMedia : ''}
+  ${props => (props.desktopOnly ? desktopOnlyMedia : '')}
 `;
 
 export const Icon = styled.div`
