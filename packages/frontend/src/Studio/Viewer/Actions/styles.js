@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+const desktopOnlyMedia = `
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;
+
 export const Wrapper = styled.div`
   font-size: 0.8em;
   color: ${props => props.theme.textLight};
@@ -12,6 +18,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  ${props => props.desktopOnly ? desktopOnlyMedia : ''}
 `;
 
 export const Icon = styled.div`

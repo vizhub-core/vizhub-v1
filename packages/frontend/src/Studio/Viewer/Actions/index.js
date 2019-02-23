@@ -1,6 +1,6 @@
 import React from 'react';
-import { format } from 'd3-format';
-import { Wrapper, Icon } from './styles';
+import {format} from 'd3-format';
+import {Wrapper, Icon} from './styles';
 import {
   ForkSVG,
   FullScreenSVG,
@@ -8,19 +8,19 @@ import {
   UpvoteSVG,
   DownvoteSVG,
   ShareSVG,
-  DownloadSVG
+  DownloadSVG,
 } from './svg';
 
 export const formatVotes = format(',');
 
-export const FullScreen = () => (
-  <div style={{ width: '40px', height: '40px' }}>
-    <FullScreenSVG />
-  </div>
-);
+//export const FullScreenStandalone = () => (
+//  <div style={{ width: '40px', height: '40px' }}>
+//    <FullScreenSVG />
+//  </div>
+//);
 
-const Action = ({ svg: SVG, onClick, children }) => (
-  <Wrapper onClick={onClick}>
+const Action = ({svg: SVG, onClick, children, desktopOnly}) => (
+  <Wrapper onClick={onClick} desktopOnly={desktopOnly}>
     <Icon>
       <SVG />
     </Icon>
@@ -28,22 +28,26 @@ const Action = ({ svg: SVG, onClick, children }) => (
   </Wrapper>
 );
 
+export const FullScreen = () => <Action svg={FullScreenSVG}>Fullscreen</Action>;
+
 export const Fork = () => <Action svg={ForkSVG}>Fork</Action>;
 
-export const Edit = ({ onClick }) => (
+export const Edit = ({onClick}) => (
   <Action svg={EditSVG} onClick={onClick}>
     Edit
   </Action>
 );
 
-export const Upvote = ({ upvotes }) => (
+export const Upvote = ({upvotes}) => (
   <Action svg={UpvoteSVG}>{formatVotes(upvotes)}</Action>
 );
 
-export const Downvote = ({ downvotes }) => (
+export const Downvote = ({downvotes}) => (
   <Action svg={DownvoteSVG}>{formatVotes(downvotes)}</Action>
 );
 
 export const Share = () => <Action svg={ShareSVG}>Share</Action>;
 
-export const Download = () => <Action svg={DownloadSVG}>Download</Action>;
+export const Download = () => (
+  <Action desktopOnly={true} svg={DownloadSVG}>Download</Action>
+);

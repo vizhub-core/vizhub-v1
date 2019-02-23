@@ -22,16 +22,6 @@ export const Runner = styled.div`
   background-color: #ddd;
 `;
 
-//const mobile = '500px';
-
-//export const InfoActions = styled.div`
-//  display: flex;
-//  justify-content: space-between;
-//  @media (max-width: ${mobile}) {
-//    flex-direction: column;
-//  }
-//`;
-
 export const Spaced = styled.div`
   display: flex;
   justify-content: space-between;
@@ -74,4 +64,12 @@ export const HeaderAvatar = styled(Avatar)`
 export const Description = styled.div`
   margin-top: 10px;
   font-size: 1.1em;
+`;
+
+export const Provenance = styled.div`
+  margin: 10px 0 0 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 `;

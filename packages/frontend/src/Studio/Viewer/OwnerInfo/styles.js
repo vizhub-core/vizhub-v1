@@ -10,17 +10,19 @@ export const Wrapper = styled.div`
 `;
 
 export const OwnerNamePublishDate = styled.div`
-  margin-left: 14px;
+  margin-left: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 `;
 
 export const OwnerName = styled.div`
+  color: ${props => props.theme.textMain};
   font-weight: bold;
   line-height: 1.6em;
 `;
 
 export const PublishDate = styled.div`
+  color: ${props => props.theme.textLight};
   font-size: 0.9em;
 `;
