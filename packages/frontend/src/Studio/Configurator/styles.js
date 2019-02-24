@@ -1,14 +1,22 @@
 import styled from 'styled-components';
+import { Flex } from '../../styles';
 
 export const Wrapper = styled.div`
   width: 250px;
 `;
 
-export const Header = styled.div`
+export const Header = styled(Flex)`
   padding: 10px;
   color: ${props => props.theme.foreground};
   background: #4d4d4d;
   font-size: 1.5em;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const HeaderIcon = styled.div`
+  width: 32px;
+  height: 32px;
 `;
 
 export const Section = styled.div`
