@@ -1,5 +1,9 @@
 import React from 'react';
-import { SVG } from './styles';
+import styled from 'styled-components';
+
+const SVG = styled.svg`
+  fill: ${props => props.theme.textLight};
+`;
 
 // Derived from Material Design fullscreen icon.
 export const FullScreenSVG = () => (
@@ -53,23 +57,10 @@ export const DownloadSVG = () => (
     <path d="M395.25,153h-102V0h-153v153h-102l178.5,178.5L395.25,153z M38.25,382.5v51h357v-51H38.25z" />
   </SVG>
 );
-//// Derived from Octicons thumbsup icon.
-//export const UpvoteSVG = () => (
-//  <SVG viewBox="0 0 14 16">
-//    <path d= />
-//  </SVG>
-//);
-//
-//// Derived from Octicons thumbsup icon.
-//export const UpvoteSVG = () => (
-//  <SVG viewBox="0 0 14 16">
-//    <path d= />
-//  </SVG>
-//);
-//
-//// Derived from Octicons thumbsup icon.
-//export const UpvoteSVG = () => (
-//  <SVG viewBox="0 0 14 16">
-//    <path d= />
-//  </SVG>
-//);
+
+// Derived from Material Design close icon.
+export const CloseSVG = () => (
+  <SVG viewBox="0 0 48 48">
+    <path d="M38 12.83l-2.83-2.83-11.17 11.17-11.17-11.17-2.83 2.83 11.17 11.17-11.17 11.17 2.83 2.83 11.17-11.17 11.17 11.17 2.83-2.83-11.17-11.17z" />
+  </SVG>
+);

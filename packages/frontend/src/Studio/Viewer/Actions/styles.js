@@ -24,7 +24,3 @@ export const Wrapper = styled(SmallText)`
 export const Icon = styled.div`
   width: 25px;
 `;
-
-export const SVG = styled.svg`
-  fill: ${props => props.theme.textLight};
-`;

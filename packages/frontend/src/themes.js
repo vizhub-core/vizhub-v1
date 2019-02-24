@@ -1,8 +1,15 @@
+import { hcl } from 'd3-color';
+
 const base = {
   headerHeight: 32,
   infoAvatarHeight: 64,
   infoAvatarPadding: 12,
   commentAvatarHeight: 32
+};
+
+const invertLuminance = color => {
+  const { h, c, l } = hcl(color);
+  return hcl(h, c, 100 - l).hex();
 };
 
 export const light = Object.assign({}, base, {
@@ -15,5 +22,8 @@ export const light = Object.assign({}, base, {
 
 export const dark = Object.assign({}, base, {
   foreground: 'white',
-  background: 'black'
+  background: 'black',
+
+  textMain: invertLuminance(light.textMain),
+  textLight: invertLuminance(light.textLight)
 });

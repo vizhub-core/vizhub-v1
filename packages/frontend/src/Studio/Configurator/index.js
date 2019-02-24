@@ -1,10 +1,11 @@
 import React from 'react';
-import { Wrapper, Section, File } from './styles';
+import { Wrapper, Section, File, Header } from './styles';
 
 const files = ['index.html', 'index.js', 'styles.css'];
 
 export const Configurator = ({ onFileClick }) => (
   <Wrapper>
+    <Header>Configurator</Header>
     <Section>Design</Section>
     <input type="color" value="#e66465" readOnly /> Color
     <input type="range" min="0" max="100" value="50" readOnly /> Number

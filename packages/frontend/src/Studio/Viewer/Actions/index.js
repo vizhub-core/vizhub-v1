@@ -9,7 +9,7 @@ import {
   DownvoteSVG,
   ShareSVG,
   DownloadSVG
-} from './svg';
+} from '../../../icons';
 
 export const formatVotes = format(',');
 

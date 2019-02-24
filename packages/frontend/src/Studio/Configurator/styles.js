@@ -4,9 +4,18 @@ export const Wrapper = styled.div`
   width: 250px;
 `;
 
-export const Section = styled.div`
-  border: 1px solid ${props => props.theme.foreground}
+export const Header = styled.div`
   padding: 10px;
+  color: ${props => props.theme.foreground};
+  background: #4d4d4d;
+  font-size: 1.5em;
+`;
+
+export const Section = styled.div`
+  padding: 10px;
+  color: ${props => props.theme.foreground};
+  background: #363636;
+  font-size: 1.2em;
 `;
 
 export const File = styled.div`
