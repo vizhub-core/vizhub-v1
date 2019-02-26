@@ -10,11 +10,16 @@ export const Header = styled(Flex)`
   color: ${props => props.theme.foreground};
   background: #4d4d4d;
   font-size: 1.5em;
-  justify-content: space-between;
   align-items: center;
 `;
 
+export const HeaderTitle = styled.div`
+  flex: 1;
+  text-align: center;
+`;
+
 export const HeaderIcon = styled.div`
+  position: absolute;
   width: 32px;
   height: 32px;
 `;

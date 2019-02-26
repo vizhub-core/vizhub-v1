@@ -1,5 +1,12 @@
 import React from 'react';
-import { Wrapper, Section, File, Header, HeaderIcon } from './styles';
+import {
+  Wrapper,
+  Section,
+  File,
+  Header,
+  HeaderIcon,
+  HeaderTitle
+} from './styles';
 import { ArrowBackSVG } from '../../icons';
 
 const files = ['index.html', 'index.js', 'styles.css'];
@@ -8,9 +15,9 @@ export const Configurator = ({ onFileClick }) => (
   <Wrapper>
     <Header>
       <HeaderIcon>
-        <ArrowBackSVG />
+        <ArrowBackSVG fill={'white'} />
       </HeaderIcon>
-      Configurator
+      <HeaderTitle>Configurator</HeaderTitle>
     </Header>
     <Section>Design</Section>
     <input type="color" value="#e66465" readOnly /> Color
