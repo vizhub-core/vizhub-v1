@@ -58,9 +58,16 @@ export const DownloadSVG = () => (
   </SVG>
 );
 
-// Derived from Material Design close icon.
-export const CloseSVG = () => (
-  <SVG viewBox="0 0 48 48">
-    <path d="M38 12.83l-2.83-2.83-11.17 11.17-11.17-11.17-2.83 2.83 11.17 11.17-11.17 11.17 2.83 2.83 11.17-11.17 11.17 11.17 2.83-2.83-11.17-11.17z" />
+//// Derived from Material Design close icon.
+//export const CloseSVG = () => (
+//  <SVG viewBox="0 0 48 48">
+//    <path d="M38 12.83l-2.83-2.83-11.17 11.17-11.17-11.17-2.83 2.83 11.17 11.17-11.17 11.17 2.83 2.83 11.17-11.17 11.17 11.17 2.83-2.83-11.17-11.17z" />
+//  </SVG>
+//);
+
+// Derived from Material Design arrow-back icon.
+export const ArrowBackSVG = () => (
+  <SVG viewBox="0 0 24 24">
+    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
   </SVG>
 );

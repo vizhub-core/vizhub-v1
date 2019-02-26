@@ -1,16 +1,16 @@
 import React from 'react';
 import { Wrapper, Section, File, Header, HeaderIcon } from './styles';
-import { CloseSVG } from '../../icons';
+import { ArrowBackSVG } from '../../icons';
 
 const files = ['index.html', 'index.js', 'styles.css'];
 
 export const Configurator = ({ onFileClick }) => (
   <Wrapper>
     <Header>
-      Configurator
       <HeaderIcon>
-        <CloseSVG />
+        <ArrowBackSVG />
       </HeaderIcon>
+      Configurator
     </Header>
     <Section>Design</Section>
     <input type="color" value="#e66465" readOnly /> Color
