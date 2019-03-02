@@ -18,9 +18,9 @@ import { ArrowBackSVG, ArrowRightSVG } from '../../icons';
 
 const files = ['index.html', 'index.js', 'styles.css'];
 
-export const Configurator = ({ onFileClick }) => (
+export const Configurator = ({ onCloseClick, onFileClick }) => (
   <Wrapper>
-    <Header>
+    <Header onClick={onCloseClick}>
       <HeaderIcon>
         <ArrowBackSVG fill={'white'} />
       </HeaderIcon>

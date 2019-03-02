@@ -11,6 +11,7 @@ export const Header = styled(Flex)`
   background: #4d4d4d;
   font-size: 1.5em;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const HeaderIcon = styled.div`

@@ -22,7 +22,10 @@ export const Studio = ({
       <>
         {showConfigurator ? (
           <ConfiguratorWrapper>
-            <Configurator onFileClick={onFileClick} />
+            <Configurator
+              onCloseClick={onEditClick}
+              onFileClick={onFileClick}
+            />
           </ConfiguratorWrapper>
         ) : null}
         {showEditor ? (
