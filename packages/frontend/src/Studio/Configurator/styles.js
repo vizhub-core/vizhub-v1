@@ -40,10 +40,12 @@ export const SectionHeaderIcon = styled.div`
   height: 32px;
 `;
 
-export const SectionHeaderTitle = styled.div``;
+export const SectionHeaderTitle = styled.div`
+`;
 
 export const SectionBody = styled.div`
   padding: 10px;
+  background: #252525;
 `;
 
 export const File = styled.div`
@@ -53,10 +55,20 @@ export const File = styled.div`
   cursor: pointer;
 `;
 
-export const Widget = styled(Flex)``;
+export const Widget = styled(Flex)`
+  border-radius: 8px;
+  background: black;
+`;
 
-export const WidgetTitle = styled.div``;
+export const WidgetTitle = styled.div`
+  padding: 10px;
+  flex: 2;
+`;
 
 export const WidgetValue = styled.div`
-  color: ${props => props.color};
+  flex: 1;
+  background: ${props => props.fill};
+  width: 100px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 `;
