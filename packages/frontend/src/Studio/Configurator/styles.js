@@ -25,29 +25,6 @@ export const HeaderTitle = styled.div`
   text-align: center;
 `;
 
-export const Section = styled.div`
-  color: ${props => props.theme.foreground};
-  font-size: 1.2em;
-`;
-
-export const SectionHeader = styled(Flex)`
-  padding: 10px;
-  background: #363636;
-  align-items: center;
-`;
-
-export const SectionHeaderIcon = styled.div`
-  width: 24px;
-  height: 24px;
-`;
-
-export const SectionHeaderTitle = styled.div``;
-
-export const SectionBody = styled.div`
-  padding: 10px;
-  background: #222222;
-`;
-
 export const File = styled.div`
   font-family: monospace;
   font-size: 1.4em;

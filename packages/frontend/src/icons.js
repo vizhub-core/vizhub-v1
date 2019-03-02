@@ -79,3 +79,11 @@ export const ArrowRightSVG = props => (
     <path d="M10 17l5-5-5-5v10z" />
   </SVG>
 );
+
+// Derived from Material Design arrow-drop-down icon.
+// Modified viewBox.
+export const ArrowDownSVG = props => (
+  <SVG viewBox="4 4 16 16" {...props}>
+    <path d="M7 10l5 5 5-5z" />
+  </SVG>
+);

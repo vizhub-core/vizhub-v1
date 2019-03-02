@@ -1,11 +1,6 @@
 import React from 'react';
 import {
   Wrapper,
-  Section,
-  SectionHeader,
-  SectionHeaderIcon,
-  SectionHeaderTitle,
-  SectionBody,
   File,
   Header,
   HeaderIcon,
@@ -14,9 +9,33 @@ import {
   WidgetTitle,
   WidgetValue
 } from './styles';
-import { ArrowBackSVG, ArrowRightSVG } from '../../icons';
+import { ArrowBackSVG } from '../../icons';
+import { Section } from './Section';
 
 const files = ['index.html', 'index.js', 'styles.css'];
+
+const DesignSection = () => (
+  <Section title="Design" isOpen={true}>
+    <Widget>
+      <WidgetTitle>Color</WidgetTitle>
+      <WidgetValue fill="#e66465" />
+    </Widget>
+    <Widget isLast={true}>
+      <WidgetTitle>Color</WidgetTitle>
+      <WidgetValue fill="#e66465" />
+    </Widget>
+  </Section>
+);
+
+const CodeSection = ({ files, onFileClick }) => (
+  <Section title="Code">
+    {files.map(file => (
+      <File key={file} onClick={() => onFileClick(file)}>
+        {file}
+      </File>
+    ))}
+  </Section>
+);
 
 export const Configurator = ({ onCloseClick, onFileClick }) => (
   <Wrapper>
@@ -26,36 +45,8 @@ export const Configurator = ({ onCloseClick, onFileClick }) => (
       </HeaderIcon>
       <HeaderTitle>Configurator</HeaderTitle>
     </Header>
-    <Section>
-      <SectionHeader>
-        <SectionHeaderIcon>
-          <ArrowRightSVG />
-        </SectionHeaderIcon>
-        <SectionHeaderTitle>Design</SectionHeaderTitle>
-      </SectionHeader>
-      <SectionBody>
-        <Widget>
-          <WidgetTitle>Color</WidgetTitle>
-          <WidgetValue fill="#e66465" />
-        </Widget>
-        <Widget isLast={true}>
-          <WidgetTitle>Color</WidgetTitle>
-          <WidgetValue fill="#e66465" />
-        </Widget>
-      </SectionBody>
-    </Section>
-    <Section>
-      <SectionHeader>Code</SectionHeader>
-      <SectionBody>
-        {files.map(file => (
-          <File key={file} onClick={() => onFileClick(file)}>
-            {file}
-          </File>
-        ))}
-      </SectionBody>
-    </Section>
-    <Section>
-      <SectionHeader>Settings</SectionHeader>
-    </Section>
+    <DesignSection />
+    <CodeSection files={files} onFileClick={onFileClick} />
+    <Section title="Settings" />
   </Wrapper>
 );
