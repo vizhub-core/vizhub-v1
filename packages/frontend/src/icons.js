@@ -73,8 +73,9 @@ export const ArrowBackSVG = props => (
 );
 
 // Derived from Material Design arrow-right icon.
+// Modified viewBox.
 export const ArrowRightSVG = props => (
-  <SVG viewBox="0 0 24 24" {...props}>
+  <SVG viewBox="4 4 16 16" {...props}>
     <path d="M10 17l5-5-5-5v10z" />
   </SVG>
 );
