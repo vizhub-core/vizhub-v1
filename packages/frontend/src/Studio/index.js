@@ -13,6 +13,8 @@ import { dark, light } from '../themes';
 
 export const Studio = ({
   showConfigurator,
+  onConfiguratorClose,
+  onConfiguratorSectionToggle,
   showEditor,
   onEditClick,
   onFileClick
@@ -23,8 +25,9 @@ export const Studio = ({
         {showConfigurator ? (
           <ConfiguratorWrapper>
             <Configurator
-              onCloseClick={onEditClick}
+              onCloseClick={onConfiguratorClose}
               onFileClick={onFileClick}
+              onSectionToggle={onConfiguratorSectionToggle}
             />
           </ConfiguratorWrapper>
         ) : null}

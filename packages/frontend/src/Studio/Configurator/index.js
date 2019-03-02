@@ -14,8 +14,8 @@ import { Section } from './Section';
 
 const files = ['index.html', 'index.js', 'styles.css'];
 
-const DesignSection = () => (
-  <Section title="Design" isOpen={true}>
+const DesignSection = ({ onToggle }) => (
+  <Section id="design" title="Design" isOpen={true} onToggle={onToggle}>
     <Widget>
       <WidgetTitle>Color</WidgetTitle>
       <WidgetValue fill="#e66465" />
@@ -37,7 +37,11 @@ const CodeSection = ({ files, onFileClick }) => (
   </Section>
 );
 
-export const Configurator = ({ onCloseClick, onFileClick }) => (
+export const Configurator = ({
+  onCloseClick,
+  onFileClick,
+  onSectionToggle
+}) => (
   <Wrapper>
     <Header onClick={onCloseClick}>
       <HeaderIcon>
@@ -45,8 +49,12 @@ export const Configurator = ({ onCloseClick, onFileClick }) => (
       </HeaderIcon>
       <HeaderTitle>Configurator</HeaderTitle>
     </Header>
-    <DesignSection />
-    <CodeSection files={files} onFileClick={onFileClick} />
+    <DesignSection onToggle={onSectionToggle} />
+    <CodeSection
+      onToggle={onSectionToggle}
+      files={files}
+      onFileClick={onFileClick}
+    />
     <Section title="Settings" />
   </Wrapper>
 );

@@ -20,6 +20,7 @@ export const HeaderIcon = styled.div`
 
 export const HeaderTitle = styled.div`
   margin-left: 4px;
+  user-select: none;
 `;
 
 export const Body = styled.div`

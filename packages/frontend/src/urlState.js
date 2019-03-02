@@ -27,9 +27,17 @@ const setShowConfiguratorQuery = set('edit');
 export const getShowConfigurator = props =>
   getShowConfiguratorQuery(props) !== undefined;
 
-// Accepts a boolean value for showConfigurator.
+// Accepts a boolean value or string of
+// comma delimited section ids for showConfigurator.
 export const setShowConfigurator = (props, showConfigurator) =>
-  setShowConfiguratorQuery(props, showConfigurator ? null : undefined);
+  setShowConfiguratorQuery(
+    props,
+    typeof showConfigurator === 'boolean'
+      ? showConfigurator
+        ? null
+        : undefined
+      : showConfigurator
+  );
 
 // A string file name value means to show the code editor with that file open.
 // e.g. '?file=index.js' in location search string.

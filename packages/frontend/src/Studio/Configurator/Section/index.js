@@ -2,9 +2,9 @@ import React from 'react';
 import { ArrowRightSVG, ArrowDownSVG } from '../../../icons';
 import { Wrapper, Header, HeaderIcon, HeaderTitle, Body } from './styles';
 
-export const Section = ({ title, children, isOpen, onToggleOpen }) => (
+export const Section = ({ id, title, children, isOpen, onToggle }) => (
   <Wrapper>
-    <Header onClick={onToggleOpen}>
+    <Header onClick={() => onToggle(id)}>
       <HeaderIcon>{isOpen ? <ArrowDownSVG /> : <ArrowRightSVG />}</HeaderIcon>
       <HeaderTitle>{title}</HeaderTitle>
     </Header>
