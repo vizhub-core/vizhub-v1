@@ -24,8 +24,10 @@ const getShowConfiguratorQuery = get('edit');
 const setShowConfiguratorQuery = set('edit');
 
 // Returns true if configurator should be shown, false if not.
-export const getShowConfigurator = props =>
-  getShowConfiguratorQuery(props) !== undefined;
+export const getShowConfigurator = props => {
+  const value = getShowConfiguratorQuery(props);
+  return value === undefined ? false : value === null ? true : value;
+};
 
 // Accepts a boolean value or string of
 // comma delimited section ids for showConfigurator.

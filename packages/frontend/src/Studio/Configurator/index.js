@@ -14,8 +14,13 @@ import { Section } from './Section';
 
 const files = ['index.html', 'index.js', 'styles.css'];
 
-const DesignSection = ({ onToggle }) => (
-  <Section id="design" title="Design" isOpen={true} onToggle={onToggle}>
+const DesignSection = ({ onToggle, visibleSections }) => (
+  <Section
+    id="design"
+    title="Design"
+    visibleSections={visibleSections}
+    onToggle={onToggle}
+  >
     <Widget>
       <WidgetTitle>Color</WidgetTitle>
       <WidgetValue fill="#e66465" />
@@ -27,8 +32,8 @@ const DesignSection = ({ onToggle }) => (
   </Section>
 );
 
-const CodeSection = ({ files, onFileClick }) => (
-  <Section title="Code">
+const CodeSection = ({ onToggle, files, onFileClick, visibleSections }) => (
+  <Section title="Code" visibleSections={visibleSections} onToggle={onToggle}>
     {files.map(file => (
       <File key={file} onClick={() => onFileClick(file)}>
         {file}
@@ -40,7 +45,8 @@ const CodeSection = ({ files, onFileClick }) => (
 export const Configurator = ({
   onCloseClick,
   onFileClick,
-  onSectionToggle
+  onSectionToggle,
+  visibleSections
 }) => (
   <Wrapper>
     <Header onClick={onCloseClick}>
@@ -49,12 +55,18 @@ export const Configurator = ({
       </HeaderIcon>
       <HeaderTitle>Configurator</HeaderTitle>
     </Header>
-    <DesignSection onToggle={onSectionToggle} />
+    <DesignSection
+      onToggle={onSectionToggle}
+      visibleSections={visibleSections}
+    />
     <CodeSection
       onToggle={onSectionToggle}
       files={files}
       onFileClick={onFileClick}
+      visibleSections={visibleSections}
     />
-    <Section title="Settings" />
+    {
+      //  <Section title="Settings" />
+    }
   </Wrapper>
 );
