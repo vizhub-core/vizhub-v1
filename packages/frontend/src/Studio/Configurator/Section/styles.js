@@ -14,11 +14,13 @@ export const Header = styled(Flex)`
 `;
 
 export const HeaderIcon = styled.div`
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 `;
 
-export const HeaderTitle = styled.div``;
+export const HeaderTitle = styled.div`
+  margin-left: 4px;
+`;
 
 export const Body = styled.div`
   padding: 10px;

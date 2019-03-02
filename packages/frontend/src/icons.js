@@ -72,11 +72,32 @@ export const ArrowBackSVG = props => (
   </SVG>
 );
 
+const arrowProtrusion = 4;
+const arrowRightPath = [
+  'M',
+  10 - arrowProtrusion / 2,
+  ' 17l',
+  5 + arrowProtrusion,
+  '-5-',
+  5 + arrowProtrusion,
+  '-5v10z'
+].join('');
+
+const arrowDownPath = [
+  'M7 ',
+  10 - arrowProtrusion / 2,
+  'l5 ',
+  5 + arrowProtrusion,
+  ' 5-',
+  5 + arrowProtrusion,
+  'z'
+].join('');
+
 // Derived from Material Design arrow-right icon.
 // Modified viewBox.
 export const ArrowRightSVG = props => (
   <SVG viewBox="4 4 16 16" {...props}>
-    <path d="M10 17l5-5-5-5v10z" />
+    <path d={arrowRightPath} />
   </SVG>
 );
 
@@ -84,6 +105,6 @@ export const ArrowRightSVG = props => (
 // Modified viewBox.
 export const ArrowDownSVG = props => (
   <SVG viewBox="4 4 16 16" {...props}>
-    <path d="M7 10l5 5 5-5z" />
+    <path d={arrowDownPath} />
   </SVG>
 );
