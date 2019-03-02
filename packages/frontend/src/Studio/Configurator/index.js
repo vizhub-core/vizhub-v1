@@ -12,13 +12,13 @@ import {
   HeaderTitle,
   Widget,
   WidgetTitle,
-  WidgetValue,
+  WidgetValue
 } from './styles';
-import {ArrowBackSVG, ArrowRightSVG} from '../../icons';
+import { ArrowBackSVG, ArrowRightSVG } from '../../icons';
 
 const files = ['index.html', 'index.js', 'styles.css'];
 
-export const Configurator = ({onFileClick}) => (
+export const Configurator = ({ onFileClick }) => (
   <Wrapper>
     <Header>
       <HeaderIcon>
@@ -38,11 +38,10 @@ export const Configurator = ({onFileClick}) => (
           <WidgetTitle>Color</WidgetTitle>
           <WidgetValue fill="#e66465" />
         </Widget>
-
-        <input type="color" value="#e66465" readOnly /> Color
-        <input type="range" min="0" max="100" value="50" readOnly /> Number
-        <input type="text" /> String
-        <input type="checkbox" /> Boolean
+        <Widget isLast={true}>
+          <WidgetTitle>Color</WidgetTitle>
+          <WidgetValue fill="#e66465" />
+        </Widget>
       </SectionBody>
     </Section>
     <Section>

@@ -40,24 +40,23 @@ export const SectionHeaderIcon = styled.div`
   height: 32px;
 `;
 
-export const SectionHeaderTitle = styled.div`
-`;
+export const SectionHeaderTitle = styled.div``;
 
 export const SectionBody = styled.div`
   padding: 10px;
-  background: #252525;
+  background: #222222;
 `;
 
 export const File = styled.div`
   font-family: monospace;
-  margin-left: 2px;
   font-size: 1.4em;
   cursor: pointer;
 `;
 
 export const Widget = styled(Flex)`
-  border-radius: 8px;
+  border-radius: 10px;
   background: black;
+  margin-bottom: ${props => (props.isLast ? '0' : '10px')};
 `;
 
 export const WidgetTitle = styled.div`
