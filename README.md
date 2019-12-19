@@ -1,6 +1,6 @@
 # VizHub
 
-This repository contains the web app deployed to https://vizhub.com.
+This repository contains version 1 of the web app that was once deployed to https://vizhub.com. This repository is no longer maintained.
 
 [![image](https://user-images.githubusercontent.com/68416/46601539-05f7ba00-cb0b-11e8-90eb-587dc927962e.png)](https://vizhub.com/curran/5c907e49d0294538aad03ad1f41e1e28)
 [try VizHub!](https://vizhub.com/curran/5c907e49d0294538aad03ad1f41e1e28)
