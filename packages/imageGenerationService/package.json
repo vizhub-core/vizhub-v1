@@ -14,14 +14,14 @@
     "datavis-tech-entities": "1",
     "datavis-tech-presenters": "1",
     "datavis-tech-use-cases": "1",
-    "dotenv": "^6.1.0",
-    "puppeteer": "^1.8.0",
-    "sharp": "^0.20.8",
+    "dotenv": "^6.2.0",
+    "puppeteer": "^1.12.2",
+    "sharp": "^0.21.3",
     "vizhub-server-gateways": "1",
     "vizhub-ui": "1"
   },
   "devDependencies": {
-    "esm": "^3.0.84",
+    "esm": "^3.2.4",
     "mocha": "^5.2.0"
   }
 }

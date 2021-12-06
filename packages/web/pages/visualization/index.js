@@ -111,12 +111,14 @@ export default class extends Page {
       return <Error statusCode={error.statusCode} />
     }
 
-
     const { id, title, description } = new VisualizationViewModel(visualization);
     const userName = ownerUser.userName;
 
+    console.log('store');
+    console.log(this.store);
+
     return (
-      <React.Fragment>
+      <Provider store={this.store}>
         <Head>
           <Unfurl
             title={title}
@@ -125,16 +127,14 @@ export default class extends Page {
             url={absolute(visualizationRoute({userName, id}))}
           />
         </Head>
-        <Provider store={this.store}>
-          <TitledPage title={title}>
-            <FullPage>
-              <NavBar user={user} csrfToken={csrfToken} />
-              <ForkInvitation user={user}/>
-              <IDEContainer fullScreenUrl={visualizationRouteFullscreen({userName, id})} />
-            </FullPage>
-          </TitledPage>
-        </Provider>
-      </React.Fragment>
+        <TitledPage title={title}>
+          <FullPage>
+            <NavBar user={user} csrfToken={csrfToken} />
+            <ForkInvitation user={user}/>
+            <IDEContainer fullScreenUrl={visualizationRouteFullscreen({userName, id})} />
+          </FullPage>
+        </TitledPage>
+      </Provider>
     );
   }
 }
